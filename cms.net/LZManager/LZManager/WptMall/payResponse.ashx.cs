@@ -47,12 +47,12 @@ namespace LZManager.WptMall
                     string money = context.Request["money"];
                     string out_trade_no = context.Request["out_trade_no"];
                     string appid = context.Request["app_id"];
-                    string qn = context.Request["qn"];
+                    string qnStr = context.Request["qn"];
                     string up_invoice_no = context.Request["up_invoice_no"];
                     string pay_way = context.Request["pay_way"];
                     //string imei = context.Request["imei"];
 
-
+                    string[] qnAry = qnStr.Split('_');
                     //app_id = 3947 & 
                     //code = 0 & 
                     //    invoice_no = 8373acfd070e429aa324714c93c24c43 
@@ -75,7 +75,7 @@ namespace LZManager.WptMall
                     zyfparatStr.Add("pay_way", "pay_way=" + pay_way);
                     zyfparatStr.Add("invoice_no", "invoice_no=" + invoice_no);
                     zyfparatStr.Add("up_invoice_no", "up_invoice_no=" + up_invoice_no);
-                    zyfparatStr.Add("qn", "qn=" + qn);
+                    zyfparatStr.Add("qn", "qn=" + qnStr);
                     //zyfparatStr.Add("imei", "imei=" + imei);
 
                     zyfparatStr = (from entry in zyfparatStr
@@ -110,17 +110,36 @@ namespace LZManager.WptMall
                         chargeEo.OutTradeNo = out_trade_no;
                         chargeEo.AppId = appid;
                         chargeEo.Money = money;
-                        chargeEo.Duid = qn;
+                        chargeEo.Duid = qnAry[0];
                         chargeEo.PayWay = pay_way;
-                        chargeEo.Qn = qn;
+                        chargeEo.Qn = qnStr;
                         chargeEo.CreateTime = DateTime.Now.ToString();
                         int res = lcMange.addLg(chargeEo);
                         if (res > 0)
                         {
                             //更新代理的钻石
                             UserManage umMange = new UserManage();
-                            umMange.PutUrDiamondByGameId(qn, "105");
-                            context.Response.Write("0");
+                            UsersEO um = umMange.GetUserByGameId(qnAry[0]);
+                            int curDiamondNum = Convert.ToInt32(um.UrDiamondNum);
+                            if (um != null)
+                            {
+                                int addDiamonNum = Convert.ToInt32(qnAry[1]);
+                                int resDiamonNum = curDiamondNum + addDiamonNum;
+                                int ress = umMange.PutUrDiamondByGameId(qnAry[0],resDiamonNum.ToString());
+                                if (ress > 0) 
+                                {
+                                    context.Response.Write("0");
+                                }
+                                else
+                                {
+                                    context.Response.Write("6");
+                                }
+                            }
+                            else
+                            {
+                                context.Response.Write("5");
+                            }
+                            
                         }
                         else
                         {

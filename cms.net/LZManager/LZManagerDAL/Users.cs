@@ -345,8 +345,6 @@ namespace LZManager.DAL
 		}
 
 
-
-
 		#region  按 UrLoginName（字段） 查询
 
 		/// <summary>
@@ -2004,6 +2002,14 @@ namespace LZManager.DAL
 		#endregion
 
 		#region  按 UrGameId（字段） 查询
+
+        public virtual UsersEO GetUserByUrGameId(string urGameId, TransactionManager tm = null)
+        {
+            const string sql = @"SELECT Ur_id, Ur_loginName, Ur_pass, Ur_name, Ur_parent, Ur_department, Ur_phone, Ur_zone, Ur_addUser, Ur_addTime, Ur_state, Ur_del, Ur_errorlogin, Ur_lockTime, Ur_lockBindIp, Ur_text1, Ur_text2, Ur_people, Ur_Contact, Ur_gameId, Ur_diamondNum, Ur_money, Ur_percent, Ur_bankName, Ur_bank, Ur_bankNo, Ur_introducer, Ur_rolestate FROM users WHERE Ur_gameId=@Ur_gameId";
+            return Database.CreateSqlDao(sql)
+                            .AddInParameter("@Ur_gameId", urGameId, DbType.String, 150)
+                            .ExecSingle<UsersEO>(UsersEO.GetItem, tm);
+        }
 
 		/// <summary>
 		/// 按 UrGameId（字段） 查询

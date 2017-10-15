@@ -263,14 +263,16 @@ namespace LZManager.MallCharge
                 //Jswork.Alert("请选择一条记录进行修改", this.Page);
 
                 this.divAlert.Visible = true;
-                this.lblAlert.Text = Resources.Resource.tip_one_modify; //"请选择一条记录进行修改";
+                ShowCommonDlg("请选择一条记录进行修改");
+                //this.lblAlert.Text = Resources.Resource.tip_one_modify; //"请选择一条记录进行修改";
             }
             else
             {
                 //Jswork.Alert("一次只能修改一条记录", this.Page);
 
                 this.divAlert.Visible = true;
-                this.lblAlert.Text = Resources.Resource.tip_only_modify; //"一次只能修改一条记录";
+                ShowCommonDlg("一次只能修改一条记录");
+                //this.lblAlert.Text = Resources.Resource.tip_only_modify; //"一次只能修改一条记录";
             }
         }
 

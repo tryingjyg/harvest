@@ -1,4 +1,5 @@
 ﻿using LZManager.BLL;
+using LZManager.BLL.Common;
 using LZManager.DAL;
 using LZManager.Utility;
 using System;
@@ -14,12 +15,13 @@ using TinyFx.Net.Json.Linq;
 
 namespace LZManager.WptMall
 {
-    public partial class GameFunction : System.Web.UI.Page
+    public partial class GameFunction : BasePage
     {
 
         private string serverUrl = ConfigurationManager.AppSettings["ServerUrl"].ToString();
 
         private LogPaymentManage lpMange = new LogPaymentManage();
+        private UserManage umMange = new UserManage();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -49,6 +51,14 @@ namespace LZManager.WptMall
             JObject jo = (JObject)JsonConvert.DeserializeObject(responseStr);
 
             LogPaymentEO lp = new LogPaymentEO();
+            if (string.IsNullOrEmpty(this.txtDiamondNum.Text.Trim()))
+            {
+                return;
+            }
+            if ((Convert.ToInt32(this.txtDiamondNum.Text.Trim()) < 0))
+            {
+                return;
+            }
             int res = (Int32)jo["paystatus"];
             lp.Remarkid = this.txtOrderNo.Text.Trim();
             lp.Areaid = "1";
@@ -76,15 +86,27 @@ namespace LZManager.WptMall
             this.divAlert.Visible = true;
             if (lpMange.addLg(lp) > 0)
             {
-                this.lblAlert.Text = "充值成功";
+                UsersEO um = umMange.GetUser(GetUserID());
+                int subDiamondNum = Convert.ToInt32(this.txtDiamondNum.Text.Trim());
+                int resNum = Convert.ToInt32(um.UrDiamondNum) - subDiamondNum;
+                int resUpdate = umMange.PutUrDiamondNumByPK(GetUserID(), resNum.ToString());
+                if (resUpdate > 0)
+                {
+                    //this.lblAlert.Text = "充值成功";
+                    ShowCommonDlg("充值成功");
+                }
+                else
+                {
+                    //this.lblAlert.Text = "充值失败";
+                    ShowCommonDlg("充值失败");
+                }
             }
             else
             {
-                this.lblAlert.Text = "充值失败";
+                //this.lblAlert.Text = "充值失败";
+                ShowCommonDlg("充值失败");
             }
 
-            
-            
         }
 
 

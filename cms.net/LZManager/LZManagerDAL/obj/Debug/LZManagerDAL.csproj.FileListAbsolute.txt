@@ -17,3 +17,10 @@ F:\work\gmtools\cms.net\LZManager\LZManagerDAL\bin\Debug\TinyFx.dll
 F:\work\gmtools\cms.net\LZManager\LZManagerDAL\obj\Debug\LZManagerDAL.dll
 F:\work\gmtools\cms.net\LZManager\LZManagerDAL\obj\Debug\LZManagerDAL.pdb
 F:\work\gmtools\cms.net\LZManager\LZManagerDAL\obj\Debug\LZManagerDAL.csprojResolveAssemblyReference.cache
+G:\harvest\cms.net\LZManager\LZManagerDAL\bin\Debug\Extend\Log.cs
+G:\harvest\cms.net\LZManager\LZManagerDAL\bin\Debug\LZManagerDAL.dll
+G:\harvest\cms.net\LZManager\LZManagerDAL\bin\Debug\LZManagerDAL.pdb
+G:\harvest\cms.net\LZManager\LZManagerDAL\bin\Debug\TinyFx.dll
+G:\harvest\cms.net\LZManager\LZManagerDAL\obj\Debug\LZManagerDAL.csprojResolveAssemblyReference.cache
+G:\harvest\cms.net\LZManager\LZManagerDAL\obj\Debug\LZManagerDAL.dll
+G:\harvest\cms.net\LZManager\LZManagerDAL\obj\Debug\LZManagerDAL.pdb

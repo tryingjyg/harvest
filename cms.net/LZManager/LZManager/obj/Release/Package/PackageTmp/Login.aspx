@@ -23,7 +23,7 @@
             }
         }
 
-        $(function () {
+       <%--$(function () {
             $("#<%=btnland.ClientID%>").click(function () {
                 var postData = { "remarkid": "150796870710345", "roomId": "212548", "gameId": "sdmj/ddz", "gameType": "jiaofen", "chargeType": true, "roundNum": 8, "playerNum": 3, "uidAr": "[10280,10345,10343]", "ownerUid": 10280, "destUid": 10345, "useNum": -1, "lastNum": 98, "serverId": 31, "statue": 0, "unidId": "jlsfjalsdjfasjfljasdfa", "duid": 0, "createTime": "1213" };
                 $.ajax({
@@ -36,10 +36,7 @@
                 })
             });
 
-        })
-
-
-
+        })--%>
     </script>
 </head>
 <body id="userlogin_body">

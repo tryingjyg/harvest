@@ -34,7 +34,7 @@ namespace LZManager.BLL.Common
         /// <returns></returns>
         public string GetUserLoginName()
         {
-            return  EncryptionUtils.DESDecrypt(CookieUtil.GetCookie(loginnameCookie), keypassword, keypasswordiv);
+            return EncryptionUtils.DESDecrypt(CookieUtil.GetCookie(loginnameCookie), keypassword, keypasswordiv);
         }
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace LZManager.BLL.Common
         /// <returns></returns>
         public string GetUserName()
         {
-           return  EncryptionUtils.DESDecrypt(CookieUtil.GetCookie(UserNameCookie), keypassword, keypasswordiv);
+            return EncryptionUtils.DESDecrypt(CookieUtil.GetCookie(UserNameCookie), keypassword, keypasswordiv);
         }
 
         /// <summary>
@@ -154,10 +154,10 @@ namespace LZManager.BLL.Common
         public string[] GetDepartment()
         {
             //string[] a = new string[] { "WPT 产品与开发部", "WPT海外发展部", "WPT 赛事管理部", "WPT 加州" };
-            string[] a = new string[] { "管理员", "机构代理", "普通代理"};
+            string[] a = new string[] { "管理员", "机构代理", "普通代理" };
             if (this.IsLanguageEng())
             {
-                a = new string[] { "admin", "orangize", "agent",};
+                a = new string[] { "admin", "orangize", "agent", };
             }
 
 
@@ -214,7 +214,7 @@ namespace LZManager.BLL.Common
 
             return commonSearch.GetModuleTableByUseridForMenu(GetUserID(), Platformid); //周杨新增
 
-           // return commonSearchDO.GetModuleTableByUserid(GetUserID(), Platformid);
+            // return commonSearchDO.GetModuleTableByUserid(GetUserID(), Platformid);
         }
 
         /// <summary>
@@ -237,7 +237,7 @@ namespace LZManager.BLL.Common
         public DataTable GetAuthorityUrl(Page page, string url, int type)
         {
             DataTable dt = new DataTable();
-      
+
             try
             {
                 string moduleid = ""; // 模块的id
@@ -256,8 +256,8 @@ namespace LZManager.BLL.Common
                 if (url.Length > 0)
                 {
                     foreach (DataRow dtr in GetModuleTableByUserid().Select(" Md_address like '%" + url.Split('?')[0] + "%' ")) // 查询跟传入页面匹配的页面
-                    { 
-                      
+                    {
+
                         string moduleUrl = dtr["Md_address"].ToString().Split('?')[0]; // 模块的地址
 
                         if (moduleUrl.Substring(0, 4) != "http")
@@ -279,7 +279,7 @@ namespace LZManager.BLL.Common
                         else
                         {
                             moduleUrlLog = moduleUrl;
-                            if (moduleUrl == url.Split('?')[0]) 
+                            if (moduleUrl == url.Split('?')[0])
                             {
                                 moduleid = dtr["Md_id"].ToString(); // 模块id
                                 flag = 1;
@@ -337,7 +337,7 @@ namespace LZManager.BLL.Common
 
                 return dt;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Jswork.GoHistoryAlert("系统异常！", -1, page);
                 InsertLog("系统异常", ex.Message, -1, GetPlatformIdByValue(1));
@@ -374,7 +374,8 @@ namespace LZManager.BLL.Common
                 DataRow[] drs = GetGameList().Select(" Gm_gameId = '" + gameid + "'");
                 return drs[0]["Gm_name"].ToString();
             }
-            catch {
+            catch
+            {
                 return "";
             }
         }
@@ -694,7 +695,7 @@ namespace LZManager.BLL.Common
         /// <returns></returns>
         public bool IsLanguageEng()
         {
-            bool flag=false;
+            bool flag = false;
             HttpCookie cookie1 = Request.Cookies["langCook"];
 
             if (cookie1 != null && cookie1.Values["lang"] == "en-us")
@@ -708,7 +709,13 @@ namespace LZManager.BLL.Common
 
         #endregion
 
+        #region 通用输出提示框
 
+        public void ShowCommonDlg(string msg)
+        {
+            Response.Write("<script>alert('" + msg + "')</script>");
+        }
+        #endregion
 
     }
 }

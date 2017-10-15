@@ -59,7 +59,7 @@ namespace LZManager.BLL
         //}
         public int DelUsers(string set, string where, IEnumerable<DbParameter> paras)
         {
-            return usersMO.Put(set, where, paras,null);
+            return usersMO.Put(set, where, paras, null);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace LZManager.BLL
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        public int EditStateByPk(string urId,string state)
+        public int EditStateByPk(string urId, string state)
         {
             return usersMO.PutUrStateByPK(urId, state);
         }
@@ -101,6 +101,17 @@ namespace LZManager.BLL
         {
             return usersMO.GetByPK(urId);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="gameId"></param>
+        /// <returns></returns>
+        public UsersEO GetUserByGameId(string gameId)
+        {
+            return usersMO.GetUserByUrGameId(gameId, null);
+        }
+
 
         /// <summary>
         /// 获取用户信息
@@ -157,12 +168,12 @@ namespace LZManager.BLL
         /// <return>Table</return>
         public virtual DataTable GetTable(string where, IEnumerable<DbParameter> paras)
         {
-            return usersMO.GetTable(where, -1, string.Empty,paras);
+            return usersMO.GetTable(where, -1, string.Empty, paras);
         }
 
         public virtual DataTable GetList(string where, IEnumerable<DbParameter> paras)
         {
-            return usersMO.GetList(where, -1, string.Empty,paras);
+            return usersMO.GetList(where, -1, string.Empty, paras);
         }
 
 
@@ -184,7 +195,7 @@ namespace LZManager.BLL
         /// <returns></returns>
         public virtual int PutUrMoneyByPK(string urId, string urMoney)
         {
-            return usersMO.PutUrMoneyByPK(urId,urMoney);
+            return usersMO.PutUrMoneyByPK(urId, urMoney);
         }
 
         /// <summary>
@@ -201,6 +212,11 @@ namespace LZManager.BLL
         public virtual int PutUrDiamondByGameId(string gameId, string diamondNum)
         {
             return usersMO.PutUrDiamondByGameId(gameId, diamondNum);
+        }
+
+        public virtual int PutUrDiamondNumByPK(string urid, string diamondNum)
+        {
+            return usersMO.PutUrDiamondNumByPK(urid, diamondNum);
         }
     }
 }

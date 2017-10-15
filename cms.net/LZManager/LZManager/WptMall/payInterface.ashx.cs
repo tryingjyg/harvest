@@ -1,4 +1,6 @@
-﻿using LZManager.Utility;
+﻿using LZManager.BLL;
+using LZManager.DAL;
+using LZManager.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +17,8 @@ namespace LZManager.WptMall
     /// </summary>
     public class payInterface : IHttpHandler
     {
+
+        private MallGoodManage mgMange = new MallGoodManage();
 
         public void ProcessRequest(HttpContext context)
         {
@@ -239,13 +243,21 @@ namespace LZManager.WptMall
                 string useDetails = context.Request["userDetail"].ToString();
                 string uid = "";
 
+                int addNum = 0;
+                MalltgoodsEO eo = mgMange.GetGoodsByPK(goodNo);
+                if (eo != null)
+                {
+                    addNum = Convert.ToInt32(eo.MgDiamondsnum) + Convert.ToInt32(eo.MgPresentnum);
+                }
+
                 if (!string.IsNullOrEmpty(useDetails))
                 {
                     JObject jo = (JObject)JsonConvert.DeserializeObject(useDetails);
                     uid = jo["userUid"].ToString();
                 }
                 string trandeNo = DateTime.Now.ToString("yyyyMMddHHmmss");
-                string payUrl = PayUlity.ZYFPay(goodMoney, "1", trandeNo, goodName, uid);
+                string qnStr = string.Format("{0}_{1}",uid,addNum.ToString());
+                string payUrl = PayUlity.ZYFPay(goodMoney, "1", trandeNo, goodName, qnStr);
                 context.Response.Write(payUrl);
             }
 

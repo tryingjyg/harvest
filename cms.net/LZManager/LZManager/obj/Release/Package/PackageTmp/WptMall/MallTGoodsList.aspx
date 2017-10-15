@@ -121,8 +121,8 @@
                     OnClick="btnAdd_Click" Height="28px" Width="80px" />
                 <asp:Button ID="btnEdit" runat="server" CssClass="button_bak" Text="<%$ Resources:Resource,update %>"
                     OnClick="btnEdit_Click" Height="28px" Width="80px" />
-                <asp:Button ID="btnAuthorityCopy" runat="server" CssClass="button_bak" Text="<%$ Resources:Resource,authority_copytransfer %>"
-                    Height="28px"  OnClick="btnAuthorityCopy_Click" />
+                <%--<asp:Button ID="btnAuthorityCopy" runat="server" CssClass="button_bak" Text="<%$ Resources:Resource,authority_copytransfer %>"
+                    Height="28px"  OnClick="btnAuthorityCopy_Click" />--%>
                 <asp:Button ID="btnDel" runat="server" CssClass="button_bak" Text="<%$ Resources:Resource,delete %>"
                     OnClick="btnDel_Click" Height="28px" Width="80px" />
             </td>

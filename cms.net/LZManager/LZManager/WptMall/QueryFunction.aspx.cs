@@ -1,4 +1,5 @@
-﻿using LZManager.Utility;
+﻿using LZManager.BLL.Common;
+using LZManager.Utility;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -12,7 +13,7 @@ using TinyFx.Net.Json.Linq;
 
 namespace LZManager.WptMall
 {
-    public partial class QueryFunction : System.Web.UI.Page
+    public partial class QueryFunction : BasePage
     {
 
         private string serverUrl = ConfigurationManager.AppSettings["ServerUrl"].ToString();
@@ -129,7 +130,7 @@ namespace LZManager.WptMall
             if (string.IsNullOrEmpty(msg))
             {
                 this.lblAlert.Visible = true;
-                this.lblAlert.Text = "请输入相应的查询信息";
+                ShowCommonDlg("请输入相应的查询信息");
                 return false;
             }
             else

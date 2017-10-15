@@ -13,6 +13,8 @@ namespace LZManager.WptMall
     public class ConsumeReturn : IHttpHandler
     {
 
+        private UserManage umMange = new UserManage();
+
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/plain";
@@ -56,6 +58,7 @@ namespace LZManager.WptMall
             //context.Response.Write("res");
             //return;
 
+
             string remarkid = string.IsNullOrEmpty(context.Request["remarkid"]) ? "" : context.Request["remarkid"].ToString();
             string roomId = string.IsNullOrEmpty(context.Request["roomId"]) ? "" : context.Request["roomId"].ToString();
             string gameId = string.IsNullOrEmpty(context.Request["gameId"]) ? "" : context.Request["gameId"].ToString();
@@ -96,6 +99,23 @@ namespace LZManager.WptMall
                 lcEo.Statue = statue;
                 lcEo.ServerId = serverId;
                 lcEo.Duid = duid;
+
+                UsersEO um = umMange.GetUserByGameId(duid);
+                if (um != null)
+                {
+                    //返利消耗
+                    int curDiamonNum = Convert.ToInt32(um.UrDiamondNum);
+                    int resNum = curDiamonNum + Math.Abs(Convert.ToInt32(useNum));
+                    int addRes = umMange.PutUrDiamondNumByPK(um.UrId, resNum.ToString());
+                    if (addRes > 0)
+                    {
+                        context.Response.Write("{\"res\":\"0\"," + "\"remarkid\":" + remarkid + "}");
+                    }
+                    else
+                    {
+                        context.Response.Write("{\"res\":\"1\"," + "\"remarkid\":" + remarkid + "}");
+                    }
+                }
 
                 int res = lg.addLgConsume(lcEo);
                 if (res > 0)

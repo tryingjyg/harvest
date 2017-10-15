@@ -28,11 +28,11 @@ namespace LZManager.MallGoods
 
             if (GetUserLeave() >= 90)
             {
-                btnAuthorityCopy.Visible = true;
+                //btnAuthorityCopy.Visible = true;
             }
             else
             {
-                btnAuthorityCopy.Visible = false;
+                //btnAuthorityCopy.Visible = false;
             }
             if (!IsPostBack)
             {
@@ -273,14 +273,16 @@ namespace LZManager.MallGoods
                 //Jswork.Alert("请选择一条记录进行修改", this.Page);
 
                 this.divAlert.Visible = true;
-                this.lblAlert.Text = Resources.Resource.tip_one_modify; //"请选择一条记录进行修改";
+                //this.lblAlert.Text = Resources.Resource.tip_one_modify; //"请选择一条记录进行修改";
+                ShowCommonDlg("请选择一条记录进行修改");
             }
             else
             {
                 //Jswork.Alert("一次只能修改一条记录", this.Page);
 
                 this.divAlert.Visible = true;
-                this.lblAlert.Text = Resources.Resource.tip_only_modify; //"一次只能修改一条记录";
+                //this.lblAlert.Text = Resources.Resource.tip_only_modify; //"一次只能修改一条记录";
+                ShowCommonDlg("一次只能修改一条记录");
             }
         }
 
@@ -307,7 +309,8 @@ namespace LZManager.MallGoods
                 //Jswork.Alert("请至少选择一条记录进行删除", this.Page);
 
                 this.divAlert.Visible = true;
-                this.lblAlert.Text = Resources.Resource.tip_only_delete; //"请至少选择一条记录进行删除";
+                //this.lblAlert.Text = Resources.Resource.tip_only_delete; //"请至少选择一条记录进行删除";
+                ShowCommonDlg("请至少选择一条记录进行删除");
 
                 return;
             }
@@ -535,14 +538,16 @@ namespace LZManager.MallGoods
                 //Jswork.Alert("请选择一条记录进行修改", this.Page);
 
                 this.divAlert.Visible = true;
-                this.lblAlert.Text = Resources.Resource.tip_one_modify; //"请选择一条记录进行修改";
+                //this.lblAlert.Text = Resources.Resource.tip_one_modify; //"请选择一条记录进行修改";
+                Jswork.Alert(Resources.Resource.tip_one_modify, this.Page);
             }
             else
             {
                 //Jswork.Alert("一次只能修改一条记录", this.Page);
 
                 this.divAlert.Visible = true;
-                this.lblAlert.Text = Resources.Resource.tip_only_modify; //"一次只能修改一条记录";
+                Jswork.Alert(Resources.Resource.tip_only_modify, this.Page);
+                //this.lblAlert.Text = Resources.Resource.tip_only_modify; //"一次只能修改一条记录";
             }
         }
 
@@ -573,7 +578,8 @@ namespace LZManager.MallGoods
             {
                 //Jswork.Alert("请选择一条记录进行修改", this.Page);
                 this.divAlert.Visible = true;
-                this.lblAlert.Text = "请选择一条要购买的商品"; //"";
+                //this.lblAlert.Text = "请选择一条要购买的商品"; //"";
+                Jswork.Alert("请选择一条要购买的商品", this.Page);
                 return;
             }
             else
@@ -581,15 +587,16 @@ namespace LZManager.MallGoods
                 //Jswork.Alert("一次只能修改一条记录", this.Page);
 
                 this.divAlert.Visible = true;
-                this.lblAlert.Text = "一次只能购买一个商品"; //"一次只能修改一条记录";
+                //this.lblAlert.Text = "一次只能购买一个商品"; //"一次只能修改一条记录";
+                Jswork.Alert("一次只能购买一个商品", this.Page);
                 return;
             }
 
             //int payMoneyNum = Convert.ToInt32(payMoney) * 100;
             string curuserId = Session["currentgameid"].ToString();
             string payUrl = PayUlity.ZYFPay("9", payWapType, "2017101316021555", paySubject, curuserId);
-            this.divAlert.Visible = true;
-            this.lblAlert.Text = payOutTradeNo; //"一次只能修改一条记录";
+            //this.divAlert.Visible = true;
+            //this.lblAlert.Text = payOutTradeNo; //"一次只能修改一条记录";
             if (!string.IsNullOrEmpty(payUrl))
             {
                 Response.Redirect(payUrl);
