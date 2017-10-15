@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>修改分类|{:config('system.title')}</title>
+<link rel="stylesheet" type="text/css" href="__CSS__/content.css"  />
+<link rel="stylesheet" type="text/css" href="__CSS__/public.css"  />
+<script type="text/javascript" src="__JS__/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="__JS__/Public.js"></script>
+<script type="text/javascript" src="__JS__/winpop.js"></script>
+<script type="text/javascript" src="__JS__/check.js"></script>
+<script>
+$(document).ready(function() {
+	var $dldd = $('#dl dd');
+	$('.button').click(function() {
+		var 
+			classname=$dldd.find('.qtext').eq(0).val(),
+			description=$('#dl dd .textarea').val(),
+			id=$('#dl input:hidden').val();
+		
+		if (!tcheck(id,'','分类ID获取失败')) { return false; }
+		if (!tcheck(classname,'','请填写分类名称')) { return false; }
+		if (!tcheck(classname,'2,20','分类名称请在20个字符以内','length')) { return false; }
+		if (!tcheck(description,'0,30','描述请在30个字符以内','length')) { return false; }
+		
+		wintq('正在修改，请稍后...',4,20000,0,'');
+		$.ajax({
+			url:"{:url('News/classedit_do')}",
+			dataType:'json',
+			type:'POST',
+			data:'id='+id+'&classname='+classname+'&description='+description,
+			success: function(data) {
+				if (data.s=='ok') {
+					wintq('修改成功',1,1500,0,"{:url('News/classedit')}?id="+id);
+				}else {
+					wintq(data.s,3,1500,1,'');
+				}
+			}
+		});
+	});
+});
+</script>
+</head>
+<body>
+<div id="content">
+	<dl id="dl">
+    	<dt>修改分类信息</dt>
+        <dd>
+        	<span class="dd_left">分类名称：</span>
+        	<span class="dd_right"><input type="text" name="classname" class="qtext" value="{$result['ClassName']}"/><font>* 输入如：联系我们</font></span>
+        </dd>
+        <dd>
+        	<span class="dd_left">分类描述：</span>
+            <span class="dd_right"><textarea name="description" class="textarea">{$result['Description']}</textarea></span>
+        </dd><input type="hidden" value="{$result['ID']}" />
+        <dd><input type="button" class="button" value="提 交" /></dd>
+    </dl>
+</div>
+</body>
+</html>

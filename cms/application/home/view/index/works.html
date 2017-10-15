@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link href="__STATIC__/image/home/apple-touch-icon-57.png" sizes="57x57" rel="apple-touch-icon">
+    <link href="__STATIC__/image/home/apple-touch-icon-72.png" sizes="72x72" rel="apple-touch-icon">
+    <link href="__STATIC__/image/home/apple-touch-icon-114.png" sizes="114x114" rel="apple-touch-icon">
+    <title>案例展示-我的网站</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="">
+    <link href="__CSS__/home/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="__JS__/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="__JS__/theme_trust.js"></script>
+    <script type="text/javascript" src="__JS__/home/main.js"></script>
+    <script>
+        jQuery(document).ready(function() {
+            jQuery('#openSidebar').click(function() {
+                jQuery('.wrapper').toggleClass('openNav');
+
+            });
+            jQuery('#menu a').click(function() {
+                jQuery('.wrapper').removeClass('openNav');
+            });
+
+
+        });
+    </script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+    <style type="text/css">
+        html,
+        body,
+        wrapper {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+{include file="public/menu" /}
+        <div class="pageMain">
+            <div id="header">
+                <div class="k1120 clearfix"><a href="/#home" id="logo">logo</a>
+                </div>
+            </div>
+            <div id="case" class="scrol-page">
+                <h2 class="title"><span>我们的作品</span></h2>
+                <h5 class="infoText">新颖的设计方案，大胆的革新思想，灵活的运用最新技术，是品网视觉的特点，我们只做有灵魂的设计</h5>
+                <div class="caseNav">
+                    <ul>
+			            
+                        <li><a href="#">网站设计</a></li>
+                        
+                        <li><a href="#">手机网站/微网站</a></li>
+                        
+                        <li><a href="#">UI设计</a></li>
+                        
+                        <li><a href="#">品牌VIS</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="case k1120">
+                    <ul class="clearfix">
+                    {volist name="volist.data" id="vo"}
+                      	<li>
+                            <div class="view-tenth"><img src="__ROOT__/uploads/news/{$vo['image']}"><a href="{:url('Index/infor','id='.$vo['ID'])}" class="mask" target="_blank"><h2>{$vo.Title}</h2><p>发布于：{$vo.Dtime} / 浏览：{$vo['View']+1}</p></a>
+                            </div>
+                        </li>
+                     {/volist}
+                      </ul>
+                    <div class="paging">
+						{:$lists->render()}
+                    </div>
+                </div>
+            </div>
+        </div>
+{include file="public/footer" /}
+    </div>
+</body>
+</html>

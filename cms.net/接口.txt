@@ -1,0 +1,233 @@
+﻿
+//充值
+jsclient.recharge = function () {
+    var recharData = { "action": "IDIP_DO_PAY_CASH_REQ", "remark": "2017100402", "dis_uin": 10372, "src_uin": 10372, "role_name": "niuniu", "us_source": "2", "amount": "20", "ui_ip": "127.1.1.1", "gameId": "hlynzy", "sz_desc": "充值" };
+    var strData = JSON.stringify(recharData);
+    var iUrl = "http://127.0.0.1:8888";
+    var xhr = cc.loader.getXMLHttpRequest();
+    xhr.open("POST", iUrl);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status <= 207)) {
+            var httpStatus = xhr.statusText;
+            console.log("response=" + xhr.responseText);
+        }
+    };
+    xhr.send(strData);
+    console.log("jsclient.recharge is called");
+}
+//查询充值总额
+jsclient.getRechargeAll = function () {
+    var recharData = { "action": "IDIP_QUERY_CASH_NUM_REQ", "uin": "10372", "begin_time": "20171001", "end_time": "20171010" };
+    var strData = JSON.stringify(recharData);
+    var iUrl = "http://127.0.0.1:8888";
+    var xhr = cc.loader.getXMLHttpRequest();
+    xhr.open("POST", iUrl);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status <= 207)) {
+            var httpStatus = xhr.statusText;
+            console.log("response=" + xhr.responseText);
+        }
+    };
+    xhr.send(strData);
+    console.log("jsclient.recharge is called");
+}
+//查询充值是否成功
+jsclient.reqRechargeResult = function () {
+    var recharData = { "action": "IDIP_DO_CHECK_PAY_CASH_REQ", "remark": "2017100401"};
+    var strData = JSON.stringify(recharData);
+    var iUrl = "http://127.0.0.1:8888";
+    var xhr = cc.loader.getXMLHttpRequest();
+    xhr.open("POST", iUrl);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status <= 207)) {
+            var httpStatus = xhr.statusText;
+            console.log("response=" + xhr.responseText);
+        }
+    };
+    xhr.send(strData);
+    console.log("jsclient.recharge is called");
+}
+//查询钻石数量
+jsclient.reqMoneyNum = function () {
+    var recharData = { "action": "IDIP_QUERY_CASH_REQ", "uin": "10372" };
+    var strData = JSON.stringify(recharData);
+    var iUrl = "http://127.0.0.1:8888";
+    var xhr = cc.loader.getXMLHttpRequest();
+    xhr.open("POST", iUrl);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status <= 207)) {
+            var httpStatus = xhr.statusText;
+            console.log("response=" + xhr.responseText);
+        }
+    };
+    xhr.send(strData);
+    console.log("jsclient.recharge is called");
+}
+//修改钻石数量
+jsclient.modefyMoneyNum = function () {
+    var recharData = { "action": "IDIP_DO_UPDATE_CASH_REQ", "uin": "10372" ,"source":"0","amount":"1000"};
+    var strData = JSON.stringify(recharData);
+    var iUrl = "http://127.0.0.1:8888";
+    var xhr = cc.loader.getXMLHttpRequest();
+    xhr.open("POST", iUrl);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status <= 207)) {
+            var httpStatus = xhr.statusText;
+            console.log("response=" + xhr.responseText);
+        }
+    };
+    xhr.send(strData);
+    console.log("jsclient.recharge is called");
+}
+
+
+
+
+
+//发送系统公告
+jsclient.sendSystemNotice = function () {
+    var recharData = { "action": "IDIP_DO_SEND_GM_NOTICE_REQ", "uin": "10372", "source": "0", "amount": "1000" };
+    var strData = JSON.stringify(recharData);
+    var iUrl = "http://127.0.0.1:8888";
+    var xhr = cc.loader.getXMLHttpRequest();
+    xhr.open("POST", iUrl);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status <= 207)) {
+            var httpStatus = xhr.statusText;
+            console.log("response=" + xhr.responseText);
+        }
+    };
+    xhr.send(strData);
+    console.log("jsclient.recharge is called");
+}
+
+//查询在线人数
+jsclient.reqOnlineUserNum = function () {
+    var recharData = { "action": "IDIP_QUERY_CURRENT_ONLINE_NUMBER_REQ", "uin": "10372" };
+    var strData = JSON.stringify(recharData);
+    var iUrl = "http://127.0.0.1:8888";
+    var xhr = cc.loader.getXMLHttpRequest();
+    xhr.open("POST", iUrl);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status <= 207)) {
+            var httpStatus = xhr.statusText;
+            console.log("response=" + xhr.responseText);
+        }
+    };
+    xhr.send(strData);
+    console.log("jsclient.recharge is called");
+}
+
+//请求 线上房间数量
+IDIP_DO_ROOM_NUM_REQ
+
+
+//查询玩家的充值记录
+jsclient.reqUserPayList = function () {
+    var recharData = { "action": "IDIP_DO_CHECK_PAY_LIST_REQ", "uin": "10372", "begin_time": "20171001", "end_time": "20171010" };
+    var strData = JSON.stringify(recharData);
+    var iUrl = "http://127.0.0.1:8888";
+    var xhr = cc.loader.getXMLHttpRequest();
+    xhr.open("POST", iUrl);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status <= 207)) {
+            var httpStatus = xhr.statusText;
+            console.log("response=" + xhr.responseText);
+        }
+    };
+    xhr.send(strData);
+    console.log("jsclient.recharge is called");
+}
+
+//解散房间
+jsclient.reqUserPayList = function () {
+    var recharData = { "action": "IDIP_DO_DEL_ROOM_REQ", "roomId":"101234" };
+    var strData = JSON.stringify(recharData);
+    var iUrl = "http://127.0.0.1:8888";
+    var xhr = cc.loader.getXMLHttpRequest();
+    xhr.open("POST", iUrl);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status <= 207)) {
+            var httpStatus = xhr.statusText;
+            console.log("response=" + xhr.responseText);
+        }
+    };
+    xhr.send(strData);
+    console.log("jsclient.recharge is called");
+}
+
+
+
+
+//IDIP_DO_PLAYER_INFO_REQ
+//查询玩家详细信息
+jsclient.reqPlayInfo = function () {
+    var recharData = { "action": "IDIP_DO_PLAYER_INFO_REQ", "uid": "10402" };
+    var strData = JSON.stringify(recharData);
+    var iUrl = "http://139.196.167.2:8888 
+
+";
+    var xhr = cc.loader.getXMLHttpRequest();
+    xhr.open("POST", iUrl);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status <= 207)) {
+            var httpStatus = xhr.statusText;
+            console.log("response=" + xhr.responseText);
+        }
+    };
+    xhr.send(strData);
+    console.log("jsclient.reqRePlayLog is called");
+}
+//封号请求
+jsclient.reqBandPlayer = function () {
+    var recharData = { "action": "IDIP_DO_BAN_USR_REQ", "uid": 10258, "banstatus": "1" };
+    var strData = JSON.stringify(recharData);
+    var iUrl = "http://139.196.167.2:8888 
+
+";
+    var xhr = cc.loader.getXMLHttpRequest();
+    xhr.open("POST", iUrl);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status <= 207)) {
+            var httpStatus = xhr.statusText;
+            console.log("response=" + xhr.responseText);
+        }
+    };
+    xhr.send(strData);
+    console.log("jsclient.reqRePlayLog is called");
+}
+//解封号请求
+jsclient.reqUnBandPlayer = function () {
+    var recharData = { "action": "IDIP_DO_UNBAN_USR_REQ", "uid": 10258};
+    var strData = JSON.stringify(recharData);
+    var iUrl = "http://139.196.167.2:8888 
+
+";
+    var xhr = cc.loader.getXMLHttpRequest();
+    xhr.open("POST", iUrl);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status <= 207)) {
+            var httpStatus = xhr.statusText;
+            console.log("response=" + xhr.responseText);
+        }
+    };
+    xhr.send(strData);
+    console.log("jsclient.reqRePlayLog is called");
+}
+
+//批量转移绑定
+jsclient.reqUnBandPlayer = function () {
+    var recharData = { "action": "IDIP_DO_BAND_MORE_DAILI_REQ", "unionIdArray": ["jjjjsdsd:11102", "jjsdsddsd:2222", "jjsdfasdsd:33333", "asdfasdfw:44444", ] };
+    var strData = JSON.stringify(recharData);
+    var iUrl = "http://127.0.0.1:8888";
+    var xhr = cc.loader.getXMLHttpRequest();
+    xhr.open("POST", iUrl);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status <= 207)) {
+            var httpStatus = xhr.statusText;
+            console.log("response=" + xhr.responseText);
+        }
+    };
+    xhr.send(strData);
+    console.log("jsclient.reqRePlayLog is called");
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>登录 - {:config('system.title')}</title>
+<link rel="stylesheet" type="text/css" href="__CSS__/login.css"  />
+<link rel="stylesheet" type="text/css" href="__CSS__/public.css"  />
+<script type="text/javascript" src="__JS__/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="__JS__/Public.js"></script>
+<script type="text/javascript" src="__JS__/winpop.js"></script>
+<script>
+$(function() {
+	$('.button').click(function(event) {
+		event.preventDefault();
+		var username=$('#content .utext').val();
+		var password=$('#content .ptext').val();
+		var code=$('#content .code').val();
+		if (!/^[a-zA-Z0-9_-]|[\u4e00-\u9fa5]{2,16}$/.test(username)) {
+			wintq('请输入正确的用户名',2,2000,1,'');
+			$('#content .utext').focus();
+			return;
+		}
+		if (password.length<6) {
+			wintq('请输入6位数以上的密码',2,2000,1,'');
+			$('#content .ptext').focus();
+			return;
+		}
+		wintq('正在登录，请稍后...',4,20000,0,'');
+		$.ajax({
+			url:"{:url('index/login')}",
+			dataType:"json",
+			type:'POST',
+			cache:false,
+			data:'username='+username+'&password='+password+'&code='+code,
+			success: function(data) {
+				if (data.s=='ok') {
+					wintq('登录成功',1,2000,0,"{:url('index/main')}");
+				}else {
+					$("#verify").attr('src','{:captcha_src()}?'+Math.random());
+					wintq(data.s,3,2000,1,'');
+				}
+			}
+		});
+	});
+	$('#verify').click(function() {
+		$(this).attr('src','{:captcha_src()}?'+Math.random());
+	});
+});
+</script>
+<style type="text/css">
+#content{
+	position:absolute;  
+	left:50%;  
+	top:50%;  
+	margin:-150px 0 0 -170px 
+} 
+</style>
+</head>
+<body>
+<div id="content">
+	<form action="{:url('index/login')}" method="post">
+	<dl>
+    	<dt>一智后台管理系统</dt>
+    	<dd><input type="text" placeholder="请输入用户名" name="username" class="utext" maxlength="12" value="" /></dd>
+        <dd><input type="text" placeholder="请输入密码" name="password" id="password" class="ptext" maxlength="18" value="" onfocus="this.type='password'"/></dd>
+        <dd><input type="text" name="code" class="code" maxlength="5" /> <img src="{:captcha_src()}" alt="captcha" border="0" id="verify" width="84" height="38"/><input type="submit" name="login" value="登 录" class="button" /></dd>
+        <dd><label>版本：V 1.0　　设计和维护：<a href="http://www.xbapple.com" target="_blank">哇文化</a></label></dd>
+    </dl>
+    </form>
+</div>
+</body>
+</html>

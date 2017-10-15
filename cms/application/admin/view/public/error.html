@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>错误提醒物|{:config('system.title')}</title>
+<link rel="stylesheet" type="text/css" href="__CSS__/public.css"  />
+<script type="text/javascript" src="__JS__/jquery-3.1.1.min.js"></script>
+<script>
+$(document).ready(function() {
+	var nowtime=6;
+	function hi() {
+		if (nowtime==0) {
+			window.history.go(-1);
+		}
+		$('#error .history').text(nowtime);
+		nowtime--;
+	}
+	hi();
+	setInterval(hi,1000);
+});
+</script>
+</head>
+<body>
+<div id="error">
+	<div class="img"><img src="__STATIC__/image/error.jpg" border="0" /></div>
+    <div class="font">
+    	{$content}<br />
+    	<span class="history"></span>&nbsp;秒后自动返回或点击：<a href="javascript:window.history.go(-1);">上一页</a> 手动返回
+    </div>
+</div>
+</body>
+</html>

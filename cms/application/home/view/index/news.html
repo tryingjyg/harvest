@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link href="__STATIC__/image/home/apple-touch-icon-57.png" sizes="57x57" rel="apple-touch-icon">
+    <link href="__STATIC__/image/home/apple-touch-icon-72.png" sizes="72x72" rel="apple-touch-icon">
+    <link href="__STATIC__/image/home/apple-touch-icon-114.png" sizes="114x114" rel="apple-touch-icon">
+    <title>策划一个企业网站需要注意什么？-我的网站</title>
+    <meta name="keywords" content="策划,一个,企业网站,需要,注意,什么,作为," />
+    <meta name="description" content="作为一个企业网站，首要条件就是要具有较强的盈利能力和宣传能力。一个不能给企业带来利润或宣传的网站，就如同一个垃圾网站，对企业没有丝毫的帮助。而企业网站要想具有较强">
+    <link href="__CSS__/home/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="__JS__/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="__JS__/theme_trust.js"></script>
+    <script>
+        jQuery(document).ready(function() {
+            jQuery('#openSidebar').click(function() {
+                jQuery('.wrapper').toggleClass('openNav');
+
+            });
+            jQuery('#menu a').click(function() {
+                jQuery('.wrapper').removeClass('openNav');
+            });
+
+
+        });
+    </script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+    <style type="text/css">
+        html,
+        body,
+        wrapper {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+{include file="public/menu" /}
+        <div class="pageMain">
+            <div id="header">
+                <div class="k1120 clearfix"><a href="/#home" id="logo">logo</a>
+                </div>
+            </div>
+            <div id="news" class="scrol-page">
+                <div class="k1120">
+                    <h2 class="title"><span>{$result['Title']}<br /><b>发布于：{$result['Dtime']}　浏览：{$result['View']+1}</b></span></h2>
+                    <div class="viewMain">
+                      {$result['Content']}
+                        <div class="paging">
+                        {if condition="$result['up_id'] neq '' "}
+						<a href="{:url('Index/news','id='.$result['up_id'])}">上一个</a>
+						{/if}  
+						{if condition="$result['down_id'] neq '' "}
+						<a href="{:url('Index/news','id='.$result['down_id'])}">下一个</a> 
+						{/if}
+                        </div>
+                    </div>
+                </div>
+            </div>
+{include file="public/footer" /}
+        </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7E347638-C7C6-41CB-8552-8877C3954E99}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LZManager.DAL</RootNamespace>
+    <AssemblyName>LZManagerDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TinyFx">
+      <HintPath>..\LZManagerLIB\TinyFx\TinyFx-2.0.0.0\TinyFx.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Channel.cs" />
+    <Compile Include="Extend\CommonSearch.cs" />
+    <Compile Include="Extend\FeedBack.cs" />
+    <Compile Include="Extend\Game.cs" />
+    <Compile Include="Extend\Log.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Extend\Module.cs" />
+    <Compile Include="Extend\ModulePermissions.cs" />
+    <Compile Include="Extend\Organize.cs" />
+    <Compile Include="Extend\Permissions.cs" />
+    <Compile Include="Extend\PermissionsTatal.cs" />
+    <Compile Include="Extend\PermissionsTatalP.cs" />
+    <Compile Include="Extend\Platform.cs" />
+    <Compile Include="Extend\Role.cs" />
+    <Compile Include="Extend\RoleGame.cs" />
+    <Compile Include="Extend\RoleModule.cs" />
+    <Compile Include="Extend\RoleUser.cs" />
+    <Compile Include="Extend\Users.cs" />
+    <Compile Include="FeedBack.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="LogCharge.cs" />
+    <Compile Include="LogConsume.cs" />
+    <Compile Include="LogPayment.cs" />
+    <Compile Include="Malltgoods.cs" />
+    <Compile Include="Module.cs" />
+    <Compile Include="ModulePermissions.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="Organize.cs" />
+    <Compile Include="Platform.cs" />
+    <Compile Include="Permissions.cs" />
+    <Compile Include="PermissionsTatal.cs" />
+    <Compile Include="PermissionsTatalP.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="RoleGame.cs" />
+    <Compile Include="RoleModule.cs" />
+    <Compile Include="RoleUser.cs" />
+    <Compile Include="Users.cs" />
+    <Compile Include="Extend\Channel.cs" />
+    <Compile Include="Wxusers.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

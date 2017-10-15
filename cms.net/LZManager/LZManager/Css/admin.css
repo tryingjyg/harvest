@@ -1,0 +1,193 @@
+BODY
+{
+	margin: 0px;
+}
+P
+{
+	margin: 0px;
+}
+BODY
+{
+	color: #000;
+	background-color: #fff;
+}
+BODY
+{
+	font-size: 12px;
+	line-height: 150%;
+	font-family: "Verdana" , "Arial" , "Helvetica" , "sans-serif";
+}
+TABLE
+{
+	font-size: 12px;
+	line-height: 150%;
+	font-family: "Verdana" , "Arial" , "Helvetica" , "sans-serif";
+}
+INPUT
+{
+	font-size: 12px;
+	font-family: "Verdana" , "Arial" , "Helvetica" , "sans-serif";
+}
+SELECT
+{
+	font-size: 12px;
+	font-family: "Verdana" , "Arial" , "Helvetica" , "sans-serif";
+}
+TEXTAREA
+{
+	font-size: 12px;
+	font-family: "Verdana" , "Arial" , "Helvetica" , "sans-serif";
+}
+A:link
+{
+	color: #036;
+	text-decoration: none;
+}
+A:visited
+{
+	color: #036;
+	text-decoration: none;
+}
+A:hover
+{
+	color: #f60;
+	text-decoration: underline;
+}
+A.menuChild:link
+{
+	color: #036;
+	text-decoration: none;
+}
+A.menuChild:visited
+{
+	color: #036;
+	text-decoration: none;
+}
+A.menuChild:hover
+{
+	color: #f60;
+	text-decoration: underline;
+}
+A.menuParent:link
+{
+	color: #000;
+	text-decoration: none;
+}
+A.menuParent:visited
+{
+	color: #000;
+	text-decoration: none;
+}
+A.menuParent:hover
+{
+	color: #f60;
+	text-decoration: none;
+}
+TABLE.position
+{
+	width: 100%;
+}
+TR.position
+{
+	height: 25px;
+	background-color: #f4f7fc;
+}
+TD.position
+{
+	border-right: #adceff 1px solid;
+	padding-left: 20px;
+	border-bottom: #adceff 1px solid;
+}
+TABLE.listTable
+{
+	width: 98%;
+	background-color: #b1ceee;
+}
+TR.listHeaderTr
+{
+	font-weight: bold;
+	height: 25px;
+	background-color: #ebf4fd;
+	text-align: center;
+}
+TR.listTr
+{
+	height: 25px;
+	background-color: #fff;
+	text-align: center;
+}
+TR.listAlternatingTr
+{
+	height: 25px;
+	background-color: #fffdf0;
+	text-align: center;
+}
+TR.listFooterTr
+{
+	height: 30px;
+	background-color: #ebf4fd;
+	text-align: center;
+}
+TABLE.editTable
+{
+	width: 98%;
+	background-color: #b1ceee;
+}
+TR.editHeaderTr
+{
+	height: 25px;
+	background-color: #ebf4fd;
+}
+TD.editHeaderTd
+{
+	padding-left: 50px;
+	font-weight: bold;
+}
+TR.editTr
+{
+	height: 30px;
+}
+TD.editLeftTd
+{
+	width: 150px;
+	background-color: #fffdf0;
+	text-align: center;
+}
+TD.editRightTd
+{
+	padding-left: 10px;
+	background-color: #fff;
+}
+TR.editFooterTr
+{
+	height: 40px;
+	background-color: #ebf4fd;
+}
+TD.editFooterTd
+{
+	padding-left: 150px;
+}
+
+.text
+{
+	line-height: 22px;
+	padding: 0 6px;
+	color: #666;
+}
+.title
+{
+	font-size: 15px;
+	background-image: url(../Images/left/bg_top.png);
+	color: White;
+	height: 25px;
+	vertical-align: middle;
+}
+.box
+{
+	position: relative;
+	border: 1px solid #e7e7e7;
+}
+.ptext
+{
+	color:Red;
+}

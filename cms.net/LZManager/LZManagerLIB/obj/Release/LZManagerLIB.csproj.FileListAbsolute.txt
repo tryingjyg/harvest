@@ -1,0 +1,4 @@
+F:\project\LZManager\LZManagerLIB\bin\Release\LZManagerLIB.dll
+F:\project\LZManager\LZManagerLIB\bin\Release\LZManagerLIB.pdb
+F:\project\LZManager\LZManagerLIB\obj\Release\LZManagerLIB.dll
+F:\project\LZManager\LZManagerLIB\obj\Release\LZManagerLIB.pdb

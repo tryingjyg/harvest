@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>添加单页|{:config('system.title')}</title>
+<link rel="stylesheet" type="text/css" href="__CSS__/content.css"  />
+<link rel="stylesheet" type="text/css" href="__CSS__/public.css"  />
+<link rel="stylesheet" type="text/css" href="__CSS__/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="__JS__/bootstrap-fileinput-master/css/fileinput.min.css">
+<link rel="stylesheet" type="text/css" href="__JS__/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
+<link href="__CSS__/style.css" rel="stylesheet">
+<script type="text/javascript" src="__JS__/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="__JS__/Public.js"></script>
+<script type="text/javascript" src="__JS__/winpop.js"></script>
+<script type="text/javascript" src="__JS__/check.js"></script>
+<!-- 配置文件 -->
+<script type="text/javascript" src="__STATIC__/ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="__STATIC__/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript" src="__CSS__/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="__JS__/bootstrap-fileinput-master/js/fileinput.min.js"></script>
+<script type="text/javascript" src="__JS__/bootstrap-fileinput-master/js/locales/zh.js"></script>
+<script type="text/javascript" src="__JS__/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="__STATIC__/ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="__STATIC__/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#attach_thumb").fileinput({
+		language: 'zh', //设置语言  
+	    showUpload: false,
+	    showCaption: false,
+	    browseClass: "btn btn-primary btn-lg",
+	    allowedPreviewTypes: ['image'],  
+	    allowedFileTypes: ['image'],  
+	    allowedFileExtensions: ['jpg', 'png', 'gif'],
+	    previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+	    overwriteInitial: false,
+	    initialPreviewAsData: true,
+	});
+	$('#start_time').datetimepicker({
+	    format: 'yyyy-mm-dd hh:ii:ss'
+	});
+	$('#expired_time').datetimepicker({
+	    format: 'yyyy-mm-dd hh:ii:ss'
+	});
+	var ue = UE.getEditor('container', {
+		initialFrameWidth: 600,
+		initialFrameHeight: 400
+	});
+	//获取内容
+    function getContent() {
+        return UE.getEditor('editor').getContent();
+    }
+});
+function ToUrl(x)   
+{   
+	location.href=x;
+	return false;
+}
+</script>
+</head>
+<body>
+<div class="container" style="margin-left:0;margin-right:0;">
+<div class="row">
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>添加单页</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <form method="post" class="form-horizontal" action="{:url('Page/add_do')}" id="add_link" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">页面标题</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" name="title">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">页面副标题</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" name="title_second">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">别名名称</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" name="title_alias" aria-required="true" aria-invalid="true">
+                            <span class="help-block m-b-none"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">封面图片</label>
+                        <div class="col-md-5">
+                            <input type="file" class="form-control" id="attach_thumb" name="attach_thumb" aria-required="true" aria-invalid="true">
+                            <span class="help-block m-b-none"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">详细介绍</label>
+                        <div class="col-md-5">
+                            <script id="container" name="content" type="text/plain"></script>
+                        </div>
+                    </div>                    
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">摘要：</label>
+                        <div class="col-md-5">
+                            <textarea id="hello" class="laydate-icon form-control layer-date" name="intro" aria-required="true" aria-invalid="true"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">SEO标题：</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" name="seo_title" aria-required="true" aria-invalid="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">SEO关键字：</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" name="seo_keywords" aria-required="true" aria-invalid="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">SEO描述：</label>
+                        <div class="col-md-5">
+                            <textarea id="hello" class="laydate-icon form-control layer-date" name="seo_description" aria-required="true" aria-invalid="true"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 col-sm-offset-2">
+                            <button class="btn btn-primary" type="submit">添加</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>发布文章|{:config('system.title')}</title>
+<link rel="stylesheet" type="text/css" href="__CSS__/content.css"  />
+<link rel="stylesheet" type="text/css" href="__CSS__/public.css"  />
+<script type="text/javascript" src="__JS__/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="__JS__/Public.js"></script>
+<script type="text/javascript" src="__JS__/winpop.js"></script>
+<script type="text/javascript" src="__JS__/check.js"></script>
+<!-- 配置文件 -->
+<script type="text/javascript" src="__STATIC__/ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="__STATIC__/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	var ue = UE.getEditor('container', {
+		initialFrameWidth: 1000,
+		initialFrameHeight: 400
+	});
+	//获取内容
+    function getContent() {
+        return UE.getEditor('editor').getContent();
+    }
+	var $dldd = $('#cdl dd');
+	//标题限制
+	$dldd.find('.qtext').keyup(function() {
+		le=$(this).val();
+		if (le.length>80) {
+			$(this).val(le.substr(0,80));
+			$dldd.find('font span').eq(0).text(0);
+		}else {
+			$dldd.find('font span').eq(0).text(80-le.length);
+		}
+	});
+	//描述限制
+	$dldd.find('.textarea').keyup(function() {
+		le=$(this).val();
+		if (le.length>200) {
+			$(this).val(le.substr(0,200));
+			$dldd.find('font span').eq(1).text(0);
+		}else {
+			$dldd.find('font span').eq(1).text(200-le.length);
+		}
+	});
+	$('.submit').click(function() {
+		var 
+			sid = $dldd.find('.select').val(),
+			title = $dldd.find('.qtext').eq(0).val(),
+			sortid = $dldd.find('.dtext').val(),
+			description = $dldd.find('.textarea').val();
+		var content = ue.getContent();
+		if (!tcheck(sid,'','分类ID获取失败')) { return false; }
+		if (!tcheck(title,'','请填写标题')) { return false; }
+		if (!tcheck(title,'1,80','标题请在80个字符以内','length')) { return false; }
+		if (!tcheck(sortid,'','请填写排序ID')) { return false; }
+		if (!tcheck(sortid,'number','排序ID必须是数字')) { return false; }
+		if (!tcheck(description,'0,200','描述请在200个字符以内','length')) { return false; }
+		wintq('正在处理，请稍后...',4,20000,0,'');
+		$('form').submit();
+	});
+});
+function ToUrl(x)   
+{   
+	location.href=x;
+	return false;
+}
+</script>
+</head>
+<body>
+<div id="content">
+	<h1>首页 > 新闻管理 > 发布文章</h1>
+    <h2>
+    	<div class="h2_left">
+        	<a href="{:url()}" class="whole">全部</a>
+        	<a href="javascript:void(0);" class="f5" onclick="f5();">刷新</a>
+            <a href="javascript:void(0);" onclick='ToUrl("{:url('News/add')}");' class="uclass">列表</a>
+            <a href="javascript:void(0);" onclick='ToUrl("{:url('News/classindex')}");' class="uclass">分类</a>
+            <a href="javascript:history.back();" class="Retreat">后退</a>
+            <a href="javascript:history.go(1);" class="Advance">前进</a>
+        </div>
+    </h2>
+    <form action="{:url('News/add_do')}" method="post">
+    <dl id="cdl">
+    	<dd>
+        	<span class="dd_left">所属分类：</span>
+            <span class="dd_right">
+            	<select class="select" name="Sid">
+                	{volist name="clist" id="vo"}
+                	<option value="{$vo.ID}">{$vo.ClassName}</option>
+                    {/volist}
+                </select>
+                <font>选择栏目分类</font>
+            </span>
+        </dd>
+        <dd>
+        	<span class="dd_left">标题：</span>
+            <span class="dd_right">
+            	<input type="text" class="qtext" name="Title" /><font>* 你还可以输入<span>80</span>个字符</font>
+            </span>
+        </dd>
+        <dd>
+        	<span class="dd_left">排序ID：</span>
+            <span class="dd_right">
+            	<input type="text" class="dtext" name="Sortid" value="{$Sortid}" /><font>* 排序ID，请填写数字</font>
+            </span>
+        </dd>
+        <dd>
+        	<span class="dd_left">描述：</span>
+            <span class="dd_right">
+            	<textarea class="textarea" name="Description"></textarea>
+            </span>
+            <font>* 你还可以输入<span>200</span>个字符</font>
+        </dd>
+        <dd>
+        	<span class="dd_left">内容：</span>
+            <span class="dd_right">
+            	<script id="container" name="Content" type="text/plain"></script>
+    		</span>
+        </dd>
+    	<dd><input type="submit" name="submit" value="提交" class="submit" /></dd>
+    </dl>
+    </form>
+</div>
+</body>
+</html>

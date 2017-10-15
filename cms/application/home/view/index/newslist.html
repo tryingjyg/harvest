@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link href="__STATIC__/image/home/apple-touch-icon-57.png" sizes="57x57" rel="apple-touch-icon">
+    <link href="__STATIC__/image/home/apple-touch-icon-72.png" sizes="72x72" rel="apple-touch-icon">
+    <link href="__STATIC__/image/home/apple-touch-icon-114.png" sizes="114x114" rel="apple-touch-icon">
+    <title>新闻动态-我的网站</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="">
+    <link href="__CSS__/home/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="__JS__/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="__JS__/theme_trust.js"></script>
+    <script type="text/javascript" src="__JS__/home/main.js"></script>
+    <script>
+        jQuery(document).ready(function() {
+            jQuery('#openSidebar').click(function() {
+                jQuery('.wrapper').toggleClass('openNav');
+
+            });
+            jQuery('#menu a').click(function() {
+                jQuery('.wrapper').removeClass('openNav');
+            });
+
+
+        });
+    </script>
+    <style type="text/css">
+        html,
+        body,
+        wrapper {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+{include file="public/menu" /}
+        <div class="pageMain">
+            <div id="header">
+                <div class="k1120 clearfix"><a href="/" id="logo">logo</a>
+                </div>
+            </div>
+            <div id="news" class="scrol-page">
+                <div class="k1120">
+                    <h2 class="title"><span>新闻动态</span></h2>
+                    <h5 class="infoText">您可以通过以下新闻与公司动态进一步了解我们。我们所签约的客户，无论他们的项目是大或者是小，我们都将提供100%的服务
+</h5>
+                    <div class="newsList">
+                        <ul class="clearfix">
+                        {volist name="volist.data" id="vo"}
+                       		<li>
+                           		<div class="newsListBox">
+                                <h4><a href="{:url('Index/news','id='.$vo['ID'])}" target="_blank">{$vo.Title}</a></h4>
+                                    <p class="newsViewText">{$vo.Description}</p>
+                                    <p class="newsViewFoot"><a href="{:url('Index/news','id='.$vo['ID'])}" target="_blank" class="newsListView">查看详情</a>
+                                    </p>
+                                </div>
+                            </li>
+                         {/volist}
+                        </ul>
+                        <div class="paging">
+                        {:$lists->render()}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{include file="public/footer" /}
+    </div>
+</body>
+</html>

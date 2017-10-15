@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{319EF5B3-073B-469F-B8FF-01B044F14508}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LZManager.BLL</RootNamespace>
+    <AssemblyName>LZManagerBLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FastDFS.API">
+      <HintPath>..\LZManagerLIB\FastDFS\FastDFS-2.0.0.0\FastDFS.API.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\LZManagerLIB\Log4net\Log4net-1.2.11.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client">
+      <HintPath>..\LZManagerLIB\RabbitMQ\RabbitMQ-3.2.1.0\RabbitMQ.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.ServiceModel">
+      <HintPath>..\LZManagerLIB\RabbitMQ\RabbitMQ-3.2.1.0\RabbitMQ.ServiceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TinyFx">
+      <HintPath>..\LZManagerLIB\TinyFx\TinyFx-2.0.0.0\TinyFx.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChannelMessage.cs" />
+    <Compile Include="CommonDO\CommonSearchDO.cs" />
+    <Compile Include="CommonDO\WebCache.cs" />
+    <Compile Include="Common\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\CommonPage.cs" />
+    <Compile Include="Common\CommonUtil.cs" />
+    <Compile Include="Common\CookieUtil.cs" />
+    <Compile Include="Common\EncryptionUtils.cs" />
+    <Compile Include="Common\FormatConversion.cs" />
+    <Compile Include="Common\Jswork.cs" />
+    <Compile Include="Common\MdUtil.cs" />
+    <Compile Include="Common\Send.cs" />
+    <Compile Include="Common\SendEmailMessage\SendMessageUtil.cs" />
+    <Compile Include="Common\SocketHeartBeat.cs" />
+    <Compile Include="Common\UpFile.cs" />
+    <Compile Include="Common\UpLoadServer.cs" />
+    <Compile Include="FeedBackMessage.cs" />
+    <Compile Include="LogChargeManage.cs" />
+    <Compile Include="LogConsumeManage.cs" />
+    <Compile Include="LogPaymentManage.cs" />
+    <Compile Include="MallGoodManage.cs" />
+    <Compile Include="OrganizeManage.cs" />
+    <Compile Include="PlatformMessage.cs" />
+    <Compile Include="GameMessage.cs" />
+    <Compile Include="LogManage.cs" />
+    <Compile Include="ModuleManage.cs" />
+    <Compile Include="ModulePermissionsManage.cs" />
+    <Compile Include="PermissionsManage.cs" />
+    <Compile Include="PermissionsTatalManage.cs" />
+    <Compile Include="PermissionsTatalPManage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoleManage.cs" />
+    <Compile Include="RoleModuleManage.cs" />
+    <Compile Include="RoleUserManage.cs" />
+    <Compile Include="UserManage.cs" />
+    <Compile Include="WxUserManage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LZManagerDAL\LZManagerDAL.csproj">
+      <Project>{7e347638-c7c6-41cb-8552-8877c3954e99}</Project>
+      <Name>LZManagerDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

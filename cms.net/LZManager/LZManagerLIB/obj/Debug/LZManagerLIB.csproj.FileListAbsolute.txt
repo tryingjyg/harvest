@@ -1,0 +1,13 @@
+F:\project\LZManager\LZManagerLIB\bin\Debug\LZManagerLIB.dll
+F:\project\LZManager\LZManagerLIB\bin\Debug\LZManagerLIB.pdb
+F:\project\LZManager\LZManagerLIB\obj\Debug\LZManagerLIB.dll
+F:\project\LZManager\LZManagerLIB\obj\Debug\LZManagerLIB.pdb
+F:\gmtools\cms.net\LZManager\LZManagerLIB\bin\Debug\LZManagerLIB.dll
+F:\gmtools\cms.net\LZManager\LZManagerLIB\bin\Debug\LZManagerLIB.pdb
+F:\gmtools\cms.net\LZManager\LZManagerLIB\obj\Debug\LZManagerLIB.dll
+F:\gmtools\cms.net\LZManager\LZManagerLIB\obj\Debug\LZManagerLIB.pdb
+F:\work\gmtools\cms.net\LZManager\LZManagerLIB\bin\Debug\LZManagerLIB.dll
+F:\work\gmtools\cms.net\LZManager\LZManagerLIB\bin\Debug\LZManagerLIB.pdb
+F:\work\gmtools\cms.net\LZManager\LZManagerLIB\obj\Debug\LZManagerLIB.dll
+F:\work\gmtools\cms.net\LZManager\LZManagerLIB\obj\Debug\LZManagerLIB.pdb
+F:\work\gmtools\cms.net\LZManager\LZManagerLIB\obj\Debug\LZManagerLIB.csprojResolveAssemblyReference.cache

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>新闻统计|{:config('system.title')}</title>
+<link rel="stylesheet" type="text/css" href="__CSS__/content.css"  />
+<link rel="stylesheet" type="text/css" href="__CSS__/public.css"  />
+<script type="text/javascript" src="__JS__/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="__JS__/Public.js"></script>
+<script type="text/javascript" src="__JS__/echarts.min.js"></script>
+<script>
+
+</script>
+</head>
+<body>
+<div id="content">
+	<h1>首页 > 统计报表 > 新闻统计</h1>
+    <h2>
+    	<div class="h2_left">
+        	<a href="{:url()}" class="whole">全部</a>
+        	<a href="javascript:;" class="f5" onclick="f5();">刷新</a>
+            <a href="javascript:history.back();" class="Retreat">后退</a>
+            <a href="javascript:history.go(1);" class="Advance">前进</a>
+        </div>
+    </h2>
+	<div id="main" style="width: 800px;height:600px;margin-top:30px;"></div>
+	<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '新闻数量分类统计'
+            },
+            tooltip: {},
+            legend: {
+                data:['新闻数量']
+            },
+            xAxis: {
+                data: {$volist.name}
+            },
+            yAxis: {},
+            series: [{
+                name: '新闻数量',
+                type: 'bar',
+                data: {$volist.data},
+	            itemStyle: {
+	                normal: {
+	                	 color: function(params) {
+	                         // build a color map as your need.
+	                         var colorList = [
+	                           '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+	                            '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+	                            '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+	                         ];
+	                         return colorList[params.dataIndex]
+	                     }
+	                }
+	            }
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>错误提醒|{:config('system.title')}</title>
+<link rel="stylesheet" type="text/css" href="__CSS__/public.css"  />
+<script type="text/javascript" src="__JS__/jquery.js"></script>
+<script>
+$(document).ready(function() {
+	var nowtime=6;
+	function hi() {
+		if (nowtime==0) {
+			//关闭父窗口的元素
+			$(window.parent.document).find("#f_pop, #sbody").remove();
+			$(window.parent.document).find("#iframe_pop, #zbody").remove();
+		}
+		$('#error .history').text(nowtime);
+		nowtime--;
+	}
+	hi();
+	setInterval(hi,1000);
+});
+</script>
+</head>
+<body>
+<div id="error">
+	<div class="img"><img src="__IMAGE__/error.jpg" border="0" /></div>
+    <div class="font">
+    	<{$content}><br />
+    	<span class="history"></span>&nbsp;秒后将自动关闭本窗口
+    </div>
+</div>
+</body>
+</html>

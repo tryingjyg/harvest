@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>用户管理|{:config('system.title')}</title>
+<link rel="stylesheet" type="text/css" href="__CSS__/public.css"  />
+<link rel="stylesheet" type="text/css" href="__CSS__/content.css"  />
+<script type="text/javascript" src="__JS__/jquery.js"></script>
+<script type="text/javascript" src="__JS__/winpop.js"></script>
+</head>
+<body>
+<div id="content">
+	<div id="con1">
+    	<h6>系统信息</h6>
+        <ul>
+        	<li><span>ThinkPHP框架版本：</span>{$info['THINK_VERSION']}</li>
+            <li><span>服务器操作系统：</span>{$info['PHP_OS']}</li>
+            <li><span>运行环境：</span>{$info['SERVER_SOFTWARE']}</li>
+            <li><span>Mysql版本：</span>{$info['mysql']['version']}</li>
+            <li><span>在线人数：</span><font>{$usercount} 人</font></li>
+            <li><span>系统设计和维护：</span><a href="http://www.xbapple.com" target="_blank">哇文化</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

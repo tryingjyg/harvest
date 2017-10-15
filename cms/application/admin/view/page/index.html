@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>分类管理|{:config('system.title')}</title>
+<link rel="stylesheet" type="text/css" href="__CSS__/content.css"  />
+<link rel="stylesheet" type="text/css" href="__CSS__/public.css"  />
+<link rel="stylesheet" type="text/css" href="__CSS__/common.css"  />
+<link rel="stylesheet" type="text/css" href="__CSS__/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="__JS__/bootstrap-table-develop/dist/bootstrap-table.min.css">
+<link href="__JS__/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet" />
+<script type="text/javascript" src="__JS__/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="__JS__/Public.js"></script>
+<script type="text/javascript" src="__JS__/winpop.js"></script>
+<script type="text/javascript" src="__JS__/check.js"></script>
+<script type="text/javascript" src="__CSS__/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="__JS__/bootstrap-table-develop/dist/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="__JS__/bootstrap-table-develop/dist/locale/bootstrap-table-zh-CN.js"></script>
+<script type="text/javascript" src="__JS__/bootstrap3-editable/js/bootstrap-editable.js"></script>
+<script type="text/javascript" src="__JS__/bootstrap-table-develop/dist/extensions/editable/bootstrap-table-editable.min.js"></script>
+<style>
+#table thead tr th {  
+    background: #038A7C;
+    color: #fff;
+}；
+</style>
+<script type="text/javascript">
+$(function(){
+	var curRow = {};
+	var curRow_edit = {};
+	$('#table').bootstrapTable({
+	    url: "{:url('Page/index')}",
+	    toolbar: "#toolbar",
+        search: false,                       //是否显示表格搜索，此搜索是客户端搜索，不会进服务端，所以，个人感觉意义不大
+        striped: true,
+        strictSearch: true,
+        cache: false,
+        undefinedText:'',
+        showColumns: true,                  //是否显示所有的列
+        showRefresh: true,                  //是否显示刷新按钮
+        minimumCountColumns: 2,             //最少允许的列数
+        clickToSelect: true,                //是否启用点击选中行
+        uniqueId: "id",                //每一行的唯一标识，一般为主键列
+        showToggle: true,                    //是否显示详细视图和列表视图的切换按钮
+        cardView: false,                    //是否显示详细视图
+        detailView: false,                   //是否显示父子表
+        showPaginationSwitch:true,
+        pagination: true,                   //是否显示分页（*）
+        queryParams: queryParams,			//传递参数（*）
+        method: 'get',                      //请求方式（*）
+        sidePagination: "server",           //分页方式：client客户端分页，server服务端分页（*）
+        pageNumber: 1,                       //初始化加载第一页，默认第一页
+        pageSize: 15,                       //每页的记录行数（*）
+        pageList: [10, 25, 50, 100],        //可供选择的每页的行数（*）
+        dataField: "data",
+        paginationPreText: "上一页",
+        paginationNextText: "下一页",
+        clickToSelect:true,
+        showFooter: false,
+	    columns: [
+	              	  {checkbox: true},
+		              {field: 'id',title: 'ID',switchable:false},
+		              {field: 'title',title: '标题',
+		               	  	 editable: {
+	                              type: "text",              //编辑框的类型。支持text|textarea|select|date|checklist等
+	                              title: "标题",           //编辑框的标题
+	                              emptytext: "空文本",       //空值的默认文本
+	                              mode: "popup",            //编辑框的模式：支持popup和inline两种模式，默认是popup
+	                              validate: function (value) { //字段验证
+	                                  if (!$.trim(value)) {
+	                                      return '不能为空';
+	                                  }
+	                              }
+	                          },
+		              }, 
+		              {field: 'title_second',title: '副标题'},
+		              {field: 'title_alias',title: '标签'},
+		              {field: 'view_count',title: '查看次数'},
+		              {field: 'attach_thumb',title: '图片',
+		                  formatter:function(value,row,index){
+		                	  if(row.attach_thumb!="" && row.attach_thumb!=null){
+		                      		return '<img width="200px" height="50px" src="__ROOT__/uploads/page/'+row.attach_thumb+'">';
+		                	  }else{
+		                		  	return;
+		                	  }
+		                  },
+		              },
+		              {field: 'create_time',title: '录入时间',visible:false},
+		              {field: 'operation',
+		                  title: '操作',
+		                  formatter:function(value,row,index){
+		                      var s = '<a class = "save" href="javascript:void(0)" title="'+row.id+'">修改</a>';
+		                      var d = '<a class = "delete" href="javascript:void(0)" title="'+row.id+'">删除</a>';
+		                      return s+' '+d;
+		                  },
+		               },
+	             ],
+	        onEditableSave: function (field, row, oldValue, $el) {
+                $.ajax({
+                    type: 'POST',
+                    url: "{:url('Page/editfield')}",
+                    data: "id="+row.id+"&"+field+"="+row[field],
+                    dataType: 'JSON',
+                    success: function (data, textStatus, jqXHR) {
+                        alert('保存成功！');
+                    },
+                    error: function () { alert("error");}
+                });
+	        },
+            onClickRow: function (row, $element) {
+                curRow = row;
+            },
+            onLoadSuccess: function (aa, bb, cc) {
+                /*$("#table .tableedit").editable({
+                    url: function (params) {
+                        var sName = $(this).attr("name");
+                        curRow_edit[sName] = params.value;
+                        curRow_edit['id'] = $(this).attr("data-pk");
+                        $.ajax({
+                            type: 'POST',
+                            url: "{:url('Page/editfield')}",
+                            data: curRow_edit,
+                            dataType: 'JSON',
+                            success: function (data, textStatus, jqXHR) {
+                                alert('保存成功！');
+                            },
+                            error: function () { alert("error");}
+                        });
+                    },
+                    type: 'text',
+                    emptytext: "空文本", 
+                    mode: "popup",            //编辑框的模式：支持popup和inline两种模式，默认是popup
+                });*/
+                //$('#table .tableedit_status').editable();
+            },
+	});
+	//请求服务数据时所传参数
+	function queryParams(params){
+	    return {
+	    	per_page : params.limit, //每一页的数据行数，默认是上面设置的10(pageSize)
+	        page : params.offset/params.limit+1, //当前页面,默认是上面设置的1(pageNumber)
+	        title : $("#title").val(),
+	        title_alias : $("#title_alias").val()
+	    }
+	}
+    $('#toolbar').on('click','#btn_add',function(){
+		window.location.href="{:url('Page/add')}";
+    });
+    $('#toolbar').on('click','#btn_delete',function(){
+        var ids = $.map($('#table').bootstrapTable('getSelections'), function (row) {
+            return row.id;
+        });
+		$.ajax({
+			url:"{:url('Page/indel')}",
+			dataType:'json',
+			type:'POST',
+			data:'post=ok&delid='+ids,
+			success: function(data) {
+				if (data.s=='ok') {
+			        $('#table').bootstrapTable('remove', {
+			            field: 'id',
+			            values: ids
+			        });
+				}else {
+					alert(data.s);
+				}
+			}
+		});	
+    });
+    $('#table').on('click','.save',function(){
+    	var id= $(this).attr('title');
+		window.location.href="{:url('Page/edit')}?id="+id;
+    });
+    $('#table').on('click','.delete',function(){
+    	var id= $(this).attr('title');
+		$.ajax({
+			url:"{:url('Page/del')}",
+			dataType:'json',
+			type:'POST',
+			data:'post=ok&id='+id,
+			success: function(data) {
+				if (data.s=='ok') {
+					//$('#table').bootstrapTable('remove',{field:'id',values:[parseInt(id)]});
+					$('#table').bootstrapTable('removeByUniqueId', id);
+				}else {
+					alert(data.s);
+				}
+			}
+		});	
+    });
+});
+</script>
+</head>
+<body>
+ <div class="panel-body" style="padding-bottom:0px;">
+	 <div class="panel panel-default">
+		 <div class="panel-heading">查询条件</div>
+		 <div class="panel-body">
+			 <form id="formSearch" class="form-horizontal">
+				 <div class="form-group" style="margin-top:15px">
+					 <label class="control-label col-sm-1" for="page_title">标题</label>
+					 <div class="col-sm-2">
+					 	<input type="text" class="form-control" name="title" id="title" placeholder="请输入标题" value="{:input('get.title')}">
+					 </div>
+					 <label class="control-label col-sm-1" for="page_title">标签</label>
+					 <div class="col-sm-2">
+					 	<input type="text" class="form-control" name="title_alias" id="title_alias" placeholder="请输入标签" value="{:input('get.title_alias')}">
+					 </div>
+					 <div class="col-sm-4" style="text-align:left;">
+					 	<button type="submit" style="margin-left:50px" id="btn_query" class="btn btn-primary">查询</button>
+					 </div>
+				 </div>
+			 </form>
+		 </div>
+	 </div>
+ 	<div id="toolbar" class="btn-group">
+		 <button id="btn_add" type="button" class="btn btn-default">
+		 	<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
+		 </button>
+		 <button id="btn_delete" type="button" class="btn btn-default">
+		 	<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>批量删除
+		 </button>
+ 	</div>
+ 	<table id="table"></table>
+</div>
+</body>
+</html>
