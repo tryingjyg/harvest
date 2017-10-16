@@ -594,7 +594,9 @@ namespace LZManager.MallGoods
 
             //int payMoneyNum = Convert.ToInt32(payMoney) * 100;
             string curuserId = Session["currentgameid"].ToString();
-            string payUrl = PayUlity.ZYFPay("9", payWapType, "2017101316021555", paySubject, curuserId);
+            System.Guid guid = new Guid();
+            string trandeNo = guid.ToString().Replace("-", "");
+            string payUrl = PayUlity.ZYFPay("9", payWapType, trandeNo, paySubject, curuserId);
             //this.divAlert.Visible = true;
             //this.lblAlert.Text = payOutTradeNo; //"一次只能修改一条记录";
             if (!string.IsNullOrEmpty(payUrl))

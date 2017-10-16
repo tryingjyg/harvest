@@ -5,7 +5,7 @@ using System.Text;
 using System.IO;
 using System.Web.UI;
 using System.Web;
-using FastDFS.Client;
+//using FastDFS.Client;
 
 namespace LZManager.BLL.Common
 {
@@ -156,11 +156,12 @@ namespace LZManager.BLL.Common
         {
             try
             {
-                FastDFSClient DFSClient = new FastDFSClient(configPath);
-                StorageNode storage = DFSClient.GetStorageNode("g1");
-                string dfsFilePath = DFSClient.UploadFile(storage, imageData, extName);
+                //FastDFSClient DFSClient = new FastDFSClient(configPath);
+                //StorageNode storage = DFSClient.GetStorageNode("g1");
+                //string dfsFilePath = DFSClient.UploadFile(storage, imageData, extName);
 
-                return dfsFilePath;
+                //return dfsFilePath;
+                return "";
             }
             catch
             {

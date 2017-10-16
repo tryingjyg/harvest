@@ -50,10 +50,6 @@
     <Reference Include="AspNetPager">
       <HintPath>..\LZManagerLIB\AspNetPager\AspNetPager.dll</HintPath>
     </Reference>
-    <Reference Include="FastDFS.API, Version=2.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\LZManagerLIB\FastDFS\FastDFS-2.0.0.0\FastDFS.API.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Net" />
     <Reference Include="System.Runtime.Remoting" />
@@ -640,6 +636,19 @@
     <Content Include="Permissions\PermissionsEdit.aspx" />
     <Content Include="Permissions\PermissionsList.aspx" />
     <Content Include="Product\ProductManage.aspx" />
+    <Content Include="QueryOnline.aspx" />
+    <Content Include="Query\QueryPlayerInfo.aspx" />
+    <Content Include="Query\QueryForbiden.aspx" />
+    <Content Include="Query\QueryUnForbiden.aspx" />
+    <Content Include="Query\QueryCharge.aspx" />
+    <Content Include="Query\QueryChargeTotal.aspx" />
+    <Content Include="Query\QueryChargeIsSuc.aspx" />
+    <Content Include="Query\QueryDiamondNum.aspx" />
+    <Content Include="Query\QueryModifyNum.aspx" />
+    <Content Include="Query\QueryPlayerChargeRecord.aspx" />
+    <Content Include="Query\QueryDelRoom.aspx" />
+    <Content Include="Query\QueryRoomNum.aspx" />
+    <Content Include="Query\QueryOnline.aspx" />
     <Content Include="Role\RoleEdit.aspx" />
     <Content Include="Role\RoleList.aspx" />
     <Content Include="Role\RoleModuleEdit.aspx" />
@@ -904,6 +913,97 @@
     <Compile Include="qrcode.ashx.cs">
       <DependentUpon>qrcode.ashx</DependentUpon>
     </Compile>
+    <Compile Include="QueryOnline.aspx.cs">
+      <DependentUpon>QueryOnline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryOnline.aspx.designer.cs">
+      <DependentUpon>QueryOnline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\QueryPlayerInfo.aspx.cs">
+      <DependentUpon>QueryPlayerInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\QueryPlayerInfo.aspx.designer.cs">
+      <DependentUpon>QueryPlayerInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\QueryForbiden.aspx.cs">
+      <DependentUpon>QueryForbiden.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\QueryForbiden.aspx.designer.cs">
+      <DependentUpon>QueryForbiden.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\QueryUnForbiden.aspx.cs">
+      <DependentUpon>QueryUnForbiden.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\QueryUnForbiden.aspx.designer.cs">
+      <DependentUpon>QueryUnForbiden.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\QueryCharge.aspx.cs">
+      <DependentUpon>QueryCharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\QueryCharge.aspx.designer.cs">
+      <DependentUpon>QueryCharge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\QueryChargeTotal.aspx.cs">
+      <DependentUpon>QueryChargeTotal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\QueryChargeTotal.aspx.designer.cs">
+      <DependentUpon>QueryChargeTotal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\QueryChargeIsSuc.aspx.cs">
+      <DependentUpon>QueryChargeIsSuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\QueryChargeIsSuc.aspx.designer.cs">
+      <DependentUpon>QueryChargeIsSuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\QueryDiamondNum.aspx.cs">
+      <DependentUpon>QueryDiamondNum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\QueryDiamondNum.aspx.designer.cs">
+      <DependentUpon>QueryDiamondNum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\QueryModifyNum.aspx.cs">
+      <DependentUpon>QueryModifyNum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\QueryModifyNum.aspx.designer.cs">
+      <DependentUpon>QueryModifyNum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\QueryPlayerChargeRecord.aspx.cs">
+      <DependentUpon>QueryPlayerChargeRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\QueryPlayerChargeRecord.aspx.designer.cs">
+      <DependentUpon>QueryPlayerChargeRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\QueryDelRoom.aspx.cs">
+      <DependentUpon>QueryDelRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\QueryDelRoom.aspx.designer.cs">
+      <DependentUpon>QueryDelRoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\QueryRoomNum.aspx.cs">
+      <DependentUpon>QueryRoomNum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\QueryRoomNum.aspx.designer.cs">
+      <DependentUpon>QueryRoomNum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\QueryOnline.aspx.cs">
+      <DependentUpon>QueryOnline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\QueryOnline.aspx.designer.cs">
+      <DependentUpon>QueryOnline.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Role\PermissionsTatalTree.ashx.cs">
       <DependentUpon>PermissionsTatalTree.ashx</DependentUpon>
     </Compile>
@@ -1064,6 +1164,9 @@
     <Compile Include="WptMall\NZYPayResponse.ashx.cs">
       <DependentUpon>NZYPayResponse.ashx</DependentUpon>
     </Compile>
+    <Compile Include="WptMall\NZYPayInterface.ashx.cs">
+      <DependentUpon>NZYPayInterface.ashx</DependentUpon>
+    </Compile>
     <Compile Include="WptMall\payInterface.ashx.cs">
       <DependentUpon>payInterface.ashx</DependentUpon>
     </Compile>
@@ -1125,6 +1228,7 @@
     <Content Include="WptMall\getGoodsList.ashx" />
     <Content Include="WptMall\charge.ashx" />
     <Content Include="WptMall\NZYPayResponse.ashx" />
+    <Content Include="WptMall\NZYPayInterface.ashx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="File\FeedBackFile\" />

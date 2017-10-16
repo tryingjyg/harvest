@@ -39,9 +39,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FastDFS.API">
-      <HintPath>..\LZManagerLIB\FastDFS\FastDFS-2.0.0.0\FastDFS.API.dll</HintPath>
-    </Reference>
     <Reference Include="log4net">
       <HintPath>..\LZManagerLIB\Log4net\Log4net-1.2.11.0\log4net.dll</HintPath>
     </Reference>

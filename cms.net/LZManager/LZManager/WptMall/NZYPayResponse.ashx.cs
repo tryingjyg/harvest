@@ -14,8 +14,8 @@ namespace LZManager.WptMall
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/plain";
-
-            context.Response.Write("NZYPayResponse");
+            context.Response.Cache.SetNoStore();
+            context.Response.Write("NZYPayResponsesdsadas");
         }
 
         public bool IsReusable

@@ -11,3 +11,7 @@ F:\work\gmtools\cms.net\LZManager\LZManagerLIB\bin\Debug\LZManagerLIB.pdb
 F:\work\gmtools\cms.net\LZManager\LZManagerLIB\obj\Debug\LZManagerLIB.dll
 F:\work\gmtools\cms.net\LZManager\LZManagerLIB\obj\Debug\LZManagerLIB.pdb
 F:\work\gmtools\cms.net\LZManager\LZManagerLIB\obj\Debug\LZManagerLIB.csprojResolveAssemblyReference.cache
+G:\harvest\cms.net\LZManager\LZManagerLIB\bin\Debug\LZManagerLIB.dll
+G:\harvest\cms.net\LZManager\LZManagerLIB\bin\Debug\LZManagerLIB.pdb
+G:\harvest\cms.net\LZManager\LZManagerLIB\obj\Debug\LZManagerLIB.dll
+G:\harvest\cms.net\LZManager\LZManagerLIB\obj\Debug\LZManagerLIB.pdb
