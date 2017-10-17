@@ -83,14 +83,14 @@
                         <font color="red">*</font>
                     </td>
                 </tr>
-                <tr>
+                <%--<tr>
                     <td class="table_body">电话:
                     </td>
                     <td class="table_none">
                         <asp:TextBox ID="txtPhone" CssClass="text_input" runat="server" Width="50%" MaxLength="50"></asp:TextBox>
                         <font color="red">*</font>
                     </td>
-                </tr>
+                </tr>--%>
                 <tr>
                     <td class="table_body">地区:
                     </td>
@@ -131,7 +131,8 @@
                         <font color="red">*</font>
                     </td>
                 </tr>
-                <tr>
+
+                <%--<tr>
                     <td class="table_body">开户名:
                     </td>
                     <td class="table_none">
@@ -156,18 +157,18 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="table_body">分成比例:
-                    </td>
-                    <td class="table_none">
-                        <asp:TextBox ID="txtPercent" CssClass="text_input" runat="server" Width="50%" MaxLength="50"></asp:TextBox>
-                        <font color="red">*</font>
-                    </td>
-                </tr>
-                <tr>
                     <td class="table_body">介绍人:
                     </td>
                     <td class="table_none">
                         <asp:TextBox ID="txtIntrdouce" CssClass="text_input" runat="server" Width="50%" MaxLength="50"></asp:TextBox>
+                        <font color="red">*</font>
+                    </td>
+                </tr>--%>
+                <tr>
+                    <td class="table_body">分成比例:
+                    </td>
+                    <td class="table_none">
+                        <asp:TextBox ID="txtPercent" CssClass="text_input" runat="server" Width="50%" MaxLength="50"></asp:TextBox>
                         <font color="red">*</font>
                     </td>
                 </tr>
@@ -179,7 +180,7 @@
                         </asp:DropDownList>
                     </td>
                 </tr>
-                <tr>
+                <%--<tr>
                     <td class="table_body">
                         <%=Resources.Resource.accountlevel%>:
                     </td>
@@ -188,7 +189,7 @@
                             <asp:ListItem Selected="True" Value="" Text="<%$ Resources:Resource,Pleaseselecttheaccountlevel %>"></asp:ListItem>
                         </asp:DropDownList>
                     </td>
-                </tr>
+                </tr>--%>
                 <tr>
                     <td class="table_body">
                         <%=Resources.Resource.role_name%>(<%=Resources.Resource.multiselect%>):

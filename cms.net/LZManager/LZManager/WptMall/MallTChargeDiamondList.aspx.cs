@@ -20,6 +20,7 @@ namespace LZManager.MallCharge
     {
 
         LogPaymentManage manager = new LogPaymentManage();
+        UserManage umMange = new UserManage();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -51,7 +52,11 @@ namespace LZManager.MallCharge
         {
 
             StringBuilder strWhere = new StringBuilder();
-
+            UsersEO um = umMange.GetUser(GetUserID());
+            if (GetUserDepartment() > 1)
+            {
+                strWhere.Append(string.Format(" duid = '{0}'",um.UrGameId));
+            }
             DataView view = manager.GetTable(strWhere.ToString(), null).DefaultView;
             string sort = (string)ViewState["SortOrder"] + " " + (string)ViewState["OrderDire"];
 

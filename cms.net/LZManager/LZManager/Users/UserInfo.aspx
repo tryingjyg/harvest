@@ -59,13 +59,13 @@
                         <asp:Label ID="txtParent" CssClass="text_input" runat="server" Width="50%" MaxLength="50"></asp:Label>
                     </td>
                 </tr>
-                <tr>
+                <%--<tr>
                     <td class="table_body">电话:
                     </td>
                     <td class="table_none">
                         <asp:Label ID="txtPhone" CssClass="text_input" runat="server" Width="50%" MaxLength="50"></asp:Label>
                     </td>
-                </tr>
+                </tr>--%>
                 <tr>
                     <td class="table_body">地区:
                     </td>

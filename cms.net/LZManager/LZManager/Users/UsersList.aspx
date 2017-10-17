@@ -178,16 +178,16 @@
                     SortExpression="Ur_gameId" />
                 <asp:BoundField DataField="Ur_diamondNum" HeaderText="钻石"
                     SortExpression="Ur_diamondNum" />
-                <asp:BoundField DataField="Ur_bankName" HeaderText="开户名"
+                <%--<asp:BoundField DataField="Ur_bankName" HeaderText="开户名"
                     SortExpression="Ur_bankName" />
                 <asp:BoundField DataField="Ur_bank" HeaderText="开户行"
                     SortExpression="Ur_bank" />
                 <asp:BoundField DataField="Ur_bankNo" HeaderText="银行账号"
-                    SortExpression="Ur_bankNo" />
+                    SortExpression="Ur_bankNo" />--%>
                 <asp:BoundField DataField="Ur_percent" HeaderText="分成"
                     SortExpression="Ur_percent" />
-                <asp:BoundField DataField="Ur_introducer" HeaderText="介绍人"
-                    SortExpression="Ur_introducer" />
+                <%--<asp:BoundField DataField="Ur_introducer" HeaderText="介绍人"
+                    SortExpression="Ur_introducer" />--%>
                 <asp:BoundField DataField="Ur_addUser" HeaderText="添加人"
                     SortExpression="Ur_addUser" />
                 <asp:BoundField DataField="Ur_rolestate" HeaderText="账号级别"

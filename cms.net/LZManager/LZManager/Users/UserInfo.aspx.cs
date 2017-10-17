@@ -1,4 +1,5 @@
 ﻿using LZManager.BLL;
+using LZManager.BLL.Common;
 using LZManager.DAL;
 using System;
 using System.Collections.Generic;
@@ -9,17 +10,17 @@ using System.Web.UI.WebControls;
 
 namespace LZManager.Users
 {
-    public partial class UserInfo : System.Web.UI.Page
+    public partial class UserInfo : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                string curUserId = Session["username"].ToString();
-                if (!string.IsNullOrEmpty(curUserId))
-                {
-                    initUserInfo(curUserId);
-                }
+                //string curUserId = GetUserID();
+                //if (!string.IsNullOrEmpty(curUserId))
+                //{
+                //    this.initUserInfo(curUserId);
+                //}
             }
             
         }
@@ -33,7 +34,7 @@ namespace LZManager.Users
                 this.txtLoginName.Text = usersEO.UrLoginName;
                 this.txtName.Text = usersEO.UrName;
                 this.txtParent.Text = usersEO.UrParent;
-                this.txtPhone.Text = usersEO.UrPhone;
+                //this.txtPhone.Text = usersEO.UrPhone;
                 this.txtArea.Text = usersEO.UrZone;
                 this.txtContactPeople.Text = usersEO.UrPeople;
                 this.txtContact.Text = usersEO.UrContact;

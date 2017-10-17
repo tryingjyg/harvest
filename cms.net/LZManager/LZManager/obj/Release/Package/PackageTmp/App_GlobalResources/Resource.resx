@@ -1,0 +1,1364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="add" xml:space="preserve">
+    <value>添加</value>
+    <comment>添加</comment>
+  </data>
+  <data name="added_by" xml:space="preserve">
+    <value>添加人</value>
+    <comment>添加人</comment>
+  </data>
+  <data name="added_time" xml:space="preserve">
+    <value>添加时间</value>
+    <comment>添加时间</comment>
+  </data>
+  <data name="address" xml:space="preserve">
+    <value>地址</value>
+    <comment>地址</comment>
+  </data>
+  <data name="Add_parent_module" xml:space="preserve">
+    <value>添加父模块</value>
+    <comment>添加父模块</comment>
+  </data>
+  <data name="Admin_acount" xml:space="preserve">
+    <value>管理员账号</value>
+    <comment>管理员账号</comment>
+  </data>
+  <data name="Admin_department" xml:space="preserve">
+    <value>管理员部门</value>
+    <comment>管理员部门</comment>
+  </data>
+  <data name="Admin_name" xml:space="preserve">
+    <value>管理员姓名</value>
+    <comment>管理员姓名</comment>
+  </data>
+  <data name="advanced_search" xml:space="preserve">
+    <value>用户信息查询</value>
+    <comment>用户信息查询</comment>
+  </data>
+  <data name="all" xml:space="preserve">
+    <value>全选</value>
+    <comment>全选</comment>
+  </data>
+  <data name="authority_copytransfer" xml:space="preserve">
+    <value>权限复制/转移</value>
+    <comment>权限复制/转移</comment>
+  </data>
+  <data name="authority_management" xml:space="preserve">
+    <value>权限系统</value>
+    <comment>权限系统</comment>
+  </data>
+  <data name="authority_setting_for_different_roles" xml:space="preserve">
+    <value>为角色设置权限</value>
+    <comment>为角色设置权限</comment>
+  </data>
+  <data name="basic_search" xml:space="preserve">
+    <value>用户基础信息查询</value>
+    <comment>用户基础信息查询</comment>
+  </data>
+  <data name="channel_description" xml:space="preserve">
+    <value>渠道描述</value>
+    <comment>渠道描述</comment>
+  </data>
+  <data name="channel_ID" xml:space="preserve">
+    <value>渠道ID</value>
+    <comment>渠道ID</comment>
+  </data>
+  <data name="channel_name" xml:space="preserve">
+    <value>渠道名称</value>
+    <comment>渠道名称</comment>
+  </data>
+  <data name="channel_setting" xml:space="preserve">
+    <value>渠道设置</value>
+    <comment>渠道设置</comment>
+  </data>
+  <data name="city" xml:space="preserve">
+    <value>城市</value>
+    <comment>城市</comment>
+  </data>
+  <data name="country" xml:space="preserve">
+    <value>国家</value>
+    <comment>国家</comment>
+  </data>
+  <data name="current_login_situation" xml:space="preserve">
+    <value>当前登录情况</value>
+    <comment>当前登录情况</comment>
+  </data>
+  <data name="current_version" xml:space="preserve">
+    <value>当前版本</value>
+    <comment>当前版本</comment>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>删除</value>
+    <comment>删除</comment>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>邮箱</value>
+    <comment>邮箱</comment>
+  </data>
+  <data name="ending_time" xml:space="preserve">
+    <value>结束时间</value>
+    <comment>结束时间</comment>
+  </data>
+  <data name="execute" xml:space="preserve">
+    <value>执行</value>
+    <comment>执行</comment>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>导出</value>
+    <comment>导出</comment>
+  </data>
+  <data name="export_as_Excel" xml:space="preserve">
+    <value>导出Excel</value>
+    <comment>导出Excel</comment>
+  </data>
+  <data name="forbidden" xml:space="preserve">
+    <value>冻结</value>
+    <comment>冻结</comment>
+  </data>
+  <data name="function_name" xml:space="preserve">
+    <value>功能名称</value>
+    <comment>功能名称</comment>
+  </data>
+  <data name="game_ID" xml:space="preserve">
+    <value>游戏ID</value>
+    <comment>游戏ID</comment>
+  </data>
+  <data name="game_management" xml:space="preserve">
+    <value>游戏管理</value>
+    <comment>游戏管理</comment>
+  </data>
+  <data name="game_name" xml:space="preserve">
+    <value>游戏名称</value>
+    <comment>游戏名称</comment>
+  </data>
+  <data name="game_setting" xml:space="preserve">
+    <value>游戏设置</value>
+    <comment>游戏设置</comment>
+  </data>
+  <data name="inverse" xml:space="preserve">
+    <value>反选</value>
+    <comment>反选</comment>
+  </data>
+  <data name="last_login_ip" xml:space="preserve">
+    <value>上次登录IP</value>
+    <comment>上次登录IP</comment>
+  </data>
+  <data name="last_login_time" xml:space="preserve">
+    <value>上次登录时间</value>
+    <comment>上次登录时间</comment>
+  </data>
+  <data name="link" xml:space="preserve">
+    <value>链接</value>
+    <comment>链接</comment>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>登录</value>
+    <comment>登录</comment>
+  </data>
+  <data name="login_information" xml:space="preserve">
+    <value>登录信息</value>
+    <comment>登录信息</comment>
+  </data>
+  <data name="Login_IP" xml:space="preserve">
+    <value>本次登录IP</value>
+    <comment>本次登录IP</comment>
+  </data>
+  <data name="login_time" xml:space="preserve">
+    <value>本次登录时间</value>
+    <comment>本次登录时间</comment>
+  </data>
+  <data name="login_timesofthismonth" xml:space="preserve">
+    <value>本月登录总数</value>
+    <comment>本月登录总数</comment>
+  </data>
+  <data name="Major_function_name" xml:space="preserve">
+    <value>总功能名称</value>
+    <comment>总功能名称</comment>
+  </data>
+  <data name="major_information_mark" xml:space="preserve">
+    <value>主要信息标记</value>
+    <comment>主要信息标记</comment>
+  </data>
+  <data name="module_feature_management" xml:space="preserve">
+    <value>模块功能管理</value>
+    <comment>模块功能管理</comment>
+  </data>
+  <data name="module_management" xml:space="preserve">
+    <value>模块管理</value>
+    <comment>模块管理</comment>
+  </data>
+  <data name="name" xml:space="preserve">
+    <value>姓名</value>
+    <comment>姓名</comment>
+  </data>
+  <data name="Off" xml:space="preserve">
+    <value>停用</value>
+    <comment>停用</comment>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>启用</value>
+    <comment>启用</comment>
+  </data>
+  <data name="online" xml:space="preserve">
+    <value>在线人数</value>
+    <comment>在线人数</comment>
+  </data>
+  <data name="On_Off" xml:space="preserve">
+    <value>是否启用</value>
+    <comment>是否启用</comment>
+  </data>
+  <data name="operation" xml:space="preserve">
+    <value>操作</value>
+    <comment>操作</comment>
+  </data>
+  <data name="operation_content" xml:space="preserve">
+    <value>操作内容</value>
+    <comment>操作内容</comment>
+  </data>
+  <data name="owned_roles" xml:space="preserve">
+    <value>拥有角色</value>
+    <comment>拥有角色</comment>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>密码</value>
+    <comment>密码</comment>
+  </data>
+  <data name="personal_information" xml:space="preserve">
+    <value>个人信息</value>
+    <comment>个人信息</comment>
+  </data>
+  <data name="phone_number" xml:space="preserve">
+    <value>电话</value>
+    <comment>电话</comment>
+  </data>
+  <data name="platform" xml:space="preserve">
+    <value>所属平台</value>
+    <comment>所属平台</comment>
+  </data>
+  <data name="platform_management" xml:space="preserve">
+    <value>平台管理</value>
+    <comment>平台管理</comment>
+  </data>
+  <data name="platform_name" xml:space="preserve">
+    <value>平台名称</value>
+    <comment>平台名称</comment>
+  </data>
+  <data name="platform_order" xml:space="preserve">
+    <value>平台排序</value>
+    <comment>平台排序</comment>
+  </data>
+  <data name="platform_picture" xml:space="preserve">
+    <value>平台图片</value>
+    <comment>平台图片</comment>
+  </data>
+  <data name="playnames" xml:space="preserve">
+    <value>玩家名</value>
+    <comment>玩家名</comment>
+  </data>
+  <data name="registered_date" xml:space="preserve">
+    <value>注册日期</value>
+    <comment>注册日期</comment>
+  </data>
+  <data name="registered_ip" xml:space="preserve">
+    <value>注册ip</value>
+    <comment>注册ip</comment>
+  </data>
+  <data name="reset" xml:space="preserve">
+    <value>重置</value>
+    <comment>重置</comment>
+  </data>
+  <data name="role" xml:space="preserve">
+    <value>用户角色</value>
+    <comment>用户角色</comment>
+  </data>
+  <data name="role_name" xml:space="preserve">
+    <value>角色名</value>
+    <comment>角色名</comment>
+  </data>
+  <data name="search" xml:space="preserve">
+    <value>搜索</value>
+    <comment>搜索</comment>
+  </data>
+  <data name="select" xml:space="preserve">
+    <value>选择</value>
+    <comment>选择</comment>
+  </data>
+  <data name="simulation" xml:space="preserve">
+    <value>仿真</value>
+    <comment>仿真</comment>
+  </data>
+  <data name="SQL_search" xml:space="preserve">
+    <value>SQL查询</value>
+    <comment>SQL查询</comment>
+  </data>
+  <data name="starting_time" xml:space="preserve">
+    <value>开始时间</value>
+    <comment>开始时间</comment>
+  </data>
+  <data name="state" xml:space="preserve">
+    <value>州/省</value>
+    <comment>州/省</comment>
+  </data>
+  <data name="status" xml:space="preserve">
+    <value>用户状态</value>
+    <comment>用户状态</comment>
+  </data>
+  <data name="String16" xml:space="preserve">
+    <value>提示：为了账号的安全，如果上面的登录情况不正常，建议您马上</value>
+    <comment>提示：为了账号的安全，如果上面的登录情况不正常，建议您马上</comment>
+  </data>
+  <data name="submodule" xml:space="preserve">
+    <value>子模块</value>
+    <comment>子模块</comment>
+  </data>
+  <data name="switch_platform" xml:space="preserve">
+    <value>切换平台</value>
+    <comment>切换平台</comment>
+  </data>
+  <data name="system_application" xml:space="preserve">
+    <value>系统应用</value>
+    <comment>系统应用</comment>
+  </data>
+  <data name="update" xml:space="preserve">
+    <value>修改</value>
+    <comment>修改</comment>
+  </data>
+  <data name="username" xml:space="preserve">
+    <value>用户名</value>
+    <comment>用户名</comment>
+  </data>
+  <data name="user_account" xml:space="preserve">
+    <value>用户账号</value>
+    <comment>用户账号</comment>
+  </data>
+  <data name="user_information_search" xml:space="preserve">
+    <value>用户信息查询</value>
+    <comment>用户信息查询</comment>
+  </data>
+  <data name="user_role_management" xml:space="preserve">
+    <value>用户角色管理</value>
+    <comment>用户角色管理</comment>
+  </data>
+  <data name="user_type" xml:space="preserve">
+    <value>用户类型</value>
+    <comment>用户类型</comment>
+  </data>
+  <data name="use_login" xml:space="preserve">
+    <value>用户登录</value>
+    <comment>用户登录</comment>
+  </data>
+  <data name="weather_forecast" xml:space="preserve">
+    <value>天气预报</value>
+    <comment>天气预报</comment>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>欢迎首页</value>
+    <comment>欢迎首页</comment>
+  </data>
+  <data name="zip_code" xml:space="preserve">
+    <value>邮编</value>
+    <comment>邮编</comment>
+  </data>
+  <data name="not_save" xml:space="preserve">
+    <value>不保存</value>
+    <comment>不保存</comment>
+  </data>
+  <data name="save_the_day" xml:space="preserve">
+    <value>保存一天</value>
+    <comment>保存一天</comment>
+  </data>
+  <data name="save_the_month" xml:space="preserve">
+    <value>保存一月</value>
+    <comment>保存一月</comment>
+  </data>
+  <data name="save_the_year" xml:space="preserve">
+    <value>保存一年</value>
+    <comment>保存一年</comment>
+  </data>
+  <data name="language" xml:space="preserve">
+    <value>语言</value>
+    <comment>语言</comment>
+  </data>
+  <data name="alldepartment" xml:space="preserve">
+    <value>所有部门</value>
+    <comment>所有部门</comment>
+  </data>
+  <data name="userrole" xml:space="preserve">
+    <value>用户角色</value>
+    <comment>用户角色</comment>
+  </data>
+  <data name="user_password" xml:space="preserve">
+    <value>用户密码</value>
+    <comment>用户密码</comment>
+  </data>
+  <data name="accountlevel" xml:space="preserve">
+    <value>账号级别</value>
+    <comment>账号级别</comment>
+  </data>
+  <data name="userdepartment" xml:space="preserve">
+    <value>用户部门</value>
+    <comment>用户部门</comment>
+  </data>
+  <data name="Account_managemen" xml:space="preserve">
+    <value>账号管理归属</value>
+    <comment>账号管理归属</comment>
+  </data>
+  <data name="BindingcommonlyusedIP" xml:space="preserve">
+    <value>绑定常用IP</value>
+    <comment>绑定常用IP</comment>
+  </data>
+  <data name="Determine" xml:space="preserve">
+    <value>确定</value>
+    <comment>确定</comment>
+  </data>
+  <data name="Dopasswordreset" xml:space="preserve">
+    <value>是否进行密码重置</value>
+    <comment>是否进行密码重置</comment>
+  </data>
+  <data name="Managerorabovelevel" xml:space="preserve">
+    <value>研发管理员以上级别使用</value>
+    <comment>研发管理员以上级别使用</comment>
+  </data>
+  <data name="MultipleIPpleaseuseseparation" xml:space="preserve">
+    <value>多个IP 请用,分隔</value>
+    <comment>多个IP 请用,分隔</comment>
+  </data>
+  <data name="multiselect" xml:space="preserve">
+    <value>可多选</value>
+    <comment>可多选</comment>
+  </data>
+  <data name="Pleaseselecttheaccountlevel" xml:space="preserve">
+    <value>请选择账号级别</value>
+    <comment>请选择账号级别</comment>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>返回</value>
+    <comment>返回</comment>
+  </data>
+  <data name="TheroleofinformationandclickCreate" xml:space="preserve">
+    <value>暂无角色信息 点击进行创建</value>
+    <comment>暂无角色信息 点击进行创建</comment>
+  </data>
+  <data name="Add_specific_background_to_the_use_of_person" xml:space="preserve">
+    <value>添加特定后台的特定人员使用</value>
+    <comment>添加特定后台的特定人员使用</comment>
+  </data>
+  <data name="allplatform" xml:space="preserve">
+    <value>所有平台</value>
+    <comment>所有平台</comment>
+  </data>
+  <data name="Belong_to_the_game" xml:space="preserve">
+    <value>所属游戏</value>
+    <comment>所属游戏</comment>
+  </data>
+  <data name="copy" xml:space="preserve">
+    <value>复制</value>
+    <comment>复制</comment>
+  </data>
+  <data name="copyaccount" xml:space="preserve">
+    <value>被复制账号</value>
+    <comment>被复制账号</comment>
+  </data>
+  <data name="No_information_click_create_platform" xml:space="preserve">
+    <value>暂无平台信息 点击进行创建</value>
+    <comment>暂无平台信息 点击进行创建</comment>
+  </data>
+  <data name="operationtype" xml:space="preserve">
+    <value>操作类型</value>
+    <comment>操作类型</comment>
+  </data>
+  <data name="person" xml:space="preserve">
+    <value>人</value>
+    <comment>人</comment>
+  </data>
+  <data name="returnrolelist" xml:space="preserve">
+    <value>返回角色列表</value>
+    <comment>返回角色列表</comment>
+  </data>
+  <data name="targetaccount" xml:space="preserve">
+    <value>目标账号</value>
+    <comment>目标账号</comment>
+  </data>
+  <data name="time" xml:space="preserve">
+    <value>次</value>
+    <comment>次</comment>
+  </data>
+  <data name="transfer" xml:space="preserve">
+    <value>转移</value>
+    <comment>转移</comment>
+  </data>
+  <data name="Transferuseraccountwithcaution" xml:space="preserve">
+    <value>被转移用户账号会被停用，角色会被清空，慎用</value>
+    <comment>被转移用户账号会被停用，角色会被清空，慎用</comment>
+  </data>
+  <data name="verification" xml:space="preserve">
+    <value>验证</value>
+    <comment>验证</comment>
+  </data>
+  <data name="Drop_upload" xml:space="preserve">
+    <value>放弃上传</value>
+    <comment>放弃上传</comment>
+  </data>
+  <data name="Game_channel" xml:space="preserve">
+    <value>游戏渠道</value>
+    <comment>游戏渠道</comment>
+  </data>
+  <data name="Game_description" xml:space="preserve">
+    <value>游戏描述</value>
+    <comment>游戏描述</comment>
+  </data>
+  <data name="Is_related_to_the_internal_log_query_number" xml:space="preserve">
+    <value>跟内部日志查询编号有关</value>
+    <comment>跟内部日志查询编号有关</comment>
+  </data>
+  <data name="moduleaddress" xml:space="preserve">
+    <value>模块地址</value>
+    <comment>模块地址</comment>
+  </data>
+  <data name="no" xml:space="preserve">
+    <value>否</value>
+    <comment>否</comment>
+  </data>
+  <data name="parentmodulename" xml:space="preserve">
+    <value>模块名称</value>
+    <comment>模块名称</comment>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>备注</value>
+    <comment>备注</comment>
+  </data>
+  <data name="Re_upload" xml:space="preserve">
+    <value>重新上传</value>
+    <comment>重新上传</comment>
+  </data>
+  <data name="sort" xml:space="preserve">
+    <value>排序</value>
+    <comment>排序</comment>
+  </data>
+  <data name="The_function_of_information_and_click_Create" xml:space="preserve">
+    <value>暂无功能信息 点击进行创建</value>
+    <comment>暂无功能信息 点击进行创建</comment>
+  </data>
+  <data name="The_general_information_and_click_the_create_function" xml:space="preserve">
+    <value>暂无总功能信息 点击进行创建</value>
+    <comment>暂无总功能信息 点击进行创建</comment>
+  </data>
+  <data name="Whether_to_display_in_the_tree_directory" xml:space="preserve">
+    <value>是否在树目录中显示</value>
+    <comment>是否在树目录中显示</comment>
+  </data>
+  <data name="yes" xml:space="preserve">
+    <value>是</value>
+    <comment>是</comment>
+  </data>
+  <data name="parent_module_name" xml:space="preserve">
+    <value>父模块名称</value>
+    <comment>父模块名称</comment>
+  </data>
+  <data name="submodule_name" xml:space="preserve">
+    <value>子模块名称</value>
+    <comment>子模块名称</comment>
+  </data>
+  <data name="All_roles" xml:space="preserve">
+    <value>所有角色</value>
+    <comment>所有角色</comment>
+  </data>
+  <data name="tip_delete_success" xml:space="preserve">
+    <value>删除成功</value>
+    <comment>删除成功</comment>
+  </data>
+  <data name="tip_one_modify" xml:space="preserve">
+    <value>请选择一条记录进行修改</value>
+    <comment>请选择一条记录进行修改</comment>
+  </data>
+  <data name="tip_only_delete" xml:space="preserve">
+    <value>请至少选择一条记录进行删除</value>
+    <comment>请至少选择一条记录进行删除</comment>
+  </data>
+  <data name="tip_only_modify" xml:space="preserve">
+    <value>一次只能修改一条记录</value>
+    <comment>一次只能修改一条记录</comment>
+  </data>
+  <data name="Add_sub_module" xml:space="preserve">
+    <value>添加子模块</value>
+    <comment>添加子模块</comment>
+  </data>
+  <data name="Display_in_the_tree_directory" xml:space="preserve">
+    <value>在树目录中显示</value>
+    <comment>在树目录中显示</comment>
+  </data>
+  <data name="edit" xml:space="preserve">
+    <value>编辑</value>
+    <comment>编辑</comment>
+  </data>
+  <data name="Hide_in_the_tree_directory" xml:space="preserve">
+    <value>在树目录中隐藏</value>
+    <comment>在树目录中隐藏</comment>
+  </data>
+  <data name="Role_management" xml:space="preserve">
+    <value>角色管理</value>
+    <comment>角色管理</comment>
+  </data>
+  <data name="user_management" xml:space="preserve">
+    <value>用户管理</value>
+    <comment>用户管理</comment>
+  </data>
+  <data name="administrators" xml:space="preserve">
+    <value>管理员</value>
+    <comment>管理员</comment>
+  </data>
+  <data name="Password_modification" xml:space="preserve">
+    <value>密码修改</value>
+    <comment>密码修改</comment>
+  </data>
+  <data name="Already_exist" xml:space="preserve">
+    <value>】已存在</value>
+    <comment>】已存在</comment>
+  </data>
+  <data name="Create_functional_information" xml:space="preserve">
+    <value>创建功能信息</value>
+    <comment>创建功能信息</comment>
+  </data>
+  <data name="Create_general_function_information" xml:space="preserve">
+    <value>创建总功能信息</value>
+    <comment>创建总功能信息</comment>
+  </data>
+  <data name="Create_parent_module" xml:space="preserve">
+    <value>创建父模块</value>
+    <comment>创建父模块</comment>
+  </data>
+  <data name="Create_platform_information" xml:space="preserve">
+    <value>创建平台信息</value>
+    <comment>创建平台信息</comment>
+  </data>
+  <data name="Create_role" xml:space="preserve">
+    <value>创建角色</value>
+    <comment>创建角色</comment>
+  </data>
+  <data name="Create_sub_module" xml:space="preserve">
+    <value>创建子模块</value>
+    <comment>创建子模块</comment>
+  </data>
+  <data name="Create_user" xml:space="preserve">
+    <value>创建用户</value>
+    <comment>创建用户</comment>
+  </data>
+  <data name="Delete_function" xml:space="preserve">
+    <value>删除功能</value>
+    <comment>删除功能</comment>
+  </data>
+  <data name="Delete_general_function" xml:space="preserve">
+    <value>删除总功能</value>
+    <comment>删除总功能</comment>
+  </data>
+  <data name="Delete_platform" xml:space="preserve">
+    <value>删除平台</value>
+    <comment>删除平台</comment>
+  </data>
+  <data name="Delete_role" xml:space="preserve">
+    <value>删除角色</value>
+    <comment>删除角色</comment>
+  </data>
+  <data name="Failure_of_functional_information_modification" xml:space="preserve">
+    <value>功能信息修改失败</value>
+    <comment>功能信息修改失败</comment>
+  </data>
+  <data name="Failure_of_total_functional_information_modification" xml:space="preserve">
+    <value>总功能信息修改失败</value>
+    <comment>总功能信息修改失败</comment>
+  </data>
+  <data name="Functional_information_creation_failed" xml:space="preserve">
+    <value>功能信息创建失败</value>
+    <comment>功能信息创建失败</comment>
+  </data>
+  <data name="Function_information_to_create_success" xml:space="preserve">
+    <value>功能信息创建成功</value>
+    <comment>功能信息创建成功</comment>
+  </data>
+  <data name="Functio_nname" xml:space="preserve">
+    <value>功能名称【</value>
+    <comment>功能名称【</comment>
+  </data>
+  <data name="Middle_role_name" xml:space="preserve">
+    <value>中角色名称【</value>
+    <comment>中角色名称【</comment>
+  </data>
+  <data name="Modify_function_information" xml:space="preserve">
+    <value>修改功能信息</value>
+    <comment>修改功能信息</comment>
+  </data>
+  <data name="Modify_general_function_information" xml:space="preserve">
+    <value>修改总功能信息</value>
+    <comment>修改总功能信息</comment>
+  </data>
+  <data name="Modify_module" xml:space="preserve">
+    <value>修改模块</value>
+    <comment>修改模块</comment>
+  </data>
+  <data name="Modify_platform_information" xml:space="preserve">
+    <value>修改平台信息</value>
+    <comment>修改平台信息</comment>
+  </data>
+  <data name="Modify_role" xml:space="preserve">
+    <value>修改角色</value>
+    <comment>修改角色</comment>
+  </data>
+  <data name="Modify_user" xml:space="preserve">
+    <value>修改用户</value>
+    <comment>修改用户</comment>
+  </data>
+  <data name="Module_creation_failed" xml:space="preserve">
+    <value>子模块创建失败</value>
+    <comment>子模块创建失败</comment>
+  </data>
+  <data name="Module_modification_failed" xml:space="preserve">
+    <value>模块修改失败</value>
+    <comment>模块修改失败</comment>
+  </data>
+  <data name="Module_modification_success" xml:space="preserve">
+    <value>模块修改成功</value>
+    <comment>模块修改成功</comment>
+  </data>
+  <data name="Name_of_the_parent_module" xml:space="preserve">
+    <value>中父模块名称【</value>
+    <comment>中父模块名称【</comment>
+  </data>
+  <data name="Name_of_total_function_in" xml:space="preserve">
+    <value>中总功能名称【</value>
+    <comment>中总功能名称【</comment>
+  </data>
+  <data name="Neutron_module_name" xml:space="preserve">
+    <value>中子模块名称【</value>
+    <comment>中子模块名称【</comment>
+  </data>
+  <data name="No_data" xml:space="preserve">
+    <value>暂无数据</value>
+    <comment>暂无数据</comment>
+  </data>
+  <data name="Parent_module_creates_success" xml:space="preserve">
+    <value>父模块创建成功</value>
+    <comment>父模块创建成功</comment>
+  </data>
+  <data name="Platform_information_creation_failed" xml:space="preserve">
+    <value>平台信息创建失败</value>
+    <comment>平台信息创建失败</comment>
+  </data>
+  <data name="Platform_information_modification_failed" xml:space="preserve">
+    <value>平台信息修改失败</value>
+    <comment>平台信息修改失败</comment>
+  </data>
+  <data name="Platform_information_to_create_success" xml:space="preserve">
+    <value>平台信息创建成功</value>
+    <comment>平台信息创建成功</comment>
+  </data>
+  <data name="Platform_ordering_must_be_numeric" xml:space="preserve">
+    <value>平台排序必须为数字</value>
+    <comment>平台排序必须为数字</comment>
+  </data>
+  <data name="Platfor_mname" xml:space="preserve">
+    <value>平台名称【</value>
+    <comment>平台名称【</comment>
+  </data>
+  <data name="Please_enter_a_character_name" xml:space="preserve">
+    <value>请输入角色名</value>
+    <comment>请输入角色名</comment>
+  </data>
+  <data name="Please_enter_a_function_name" xml:space="preserve">
+    <value>请输入功能名称</value>
+    <comment>请输入功能名称</comment>
+  </data>
+  <data name="Please_enter_a_module_address" xml:space="preserve">
+    <value>请输入模块地址</value>
+    <comment>请输入模块地址</comment>
+  </data>
+  <data name="Please_enter_a_sort_number" xml:space="preserve">
+    <value>请输入排序数字</value>
+    <comment>请输入排序数字</comment>
+  </data>
+  <data name="Please_enter_a_user_account" xml:space="preserve">
+    <value>请输入用户账号</value>
+    <comment>请输入用户账号</comment>
+  </data>
+  <data name="Please_enter_a_user_password" xml:space="preserve">
+    <value>请输入用户密码</value>
+    <comment>请输入用户密码</comment>
+  </data>
+  <data name="Please_enter_the_name_of_the_module" xml:space="preserve">
+    <value>请输入模块名称</value>
+    <comment>请输入模块名称</comment>
+  </data>
+  <data name="Please_enter_the_name_of_the_total_function" xml:space="preserve">
+    <value>请输入总功能名称</value>
+    <comment>请输入总功能名称</comment>
+  </data>
+  <data name="Please_enter_the_required" xml:space="preserve">
+    <value>请输入必填项</value>
+    <comment>请输入必填项</comment>
+  </data>
+  <data name="Please_enter_user_name" xml:space="preserve">
+    <value>请输入用户姓名</value>
+    <comment>请输入用户姓名</comment>
+  </data>
+  <data name="Please_input_the_required" xml:space="preserve">
+    <value>请录入必填项</value>
+    <comment>请录入必填项</comment>
+  </data>
+  <data name="Please_select_a_character_name" xml:space="preserve">
+    <value>请选择角色名</value>
+    <comment>请选择角色名</comment>
+  </data>
+  <data name="Please_select_Department" xml:space="preserve">
+    <value>请选择部门</value>
+    <comment>请选择部门</comment>
+  </data>
+  <data name="Please_select_the_function_name" xml:space="preserve">
+    <value>请选择功能名称</value>
+    <comment>请选择功能名称</comment>
+  </data>
+  <data name="Please_select_the_platform_name" xml:space="preserve">
+    <value>请选择平台名称</value>
+    <comment>请选择平台名称</comment>
+  </data>
+  <data name="Please_select_the_total_function_name" xml:space="preserve">
+    <value>请选择总功能名称</value>
+    <comment>请选择总功能名称</comment>
+  </data>
+  <data name="Please_select_user_department" xml:space="preserve">
+    <value>请选择用户部门</value>
+    <comment>请选择用户部门</comment>
+  </data>
+  <data name="Please_upload_platform" xml:space="preserve">
+    <value>请上传平台图片</value>
+    <comment>请上传平台图片</comment>
+  </data>
+  <data name="Role_information_change_success" xml:space="preserve">
+    <value>角色信息修改成功</value>
+    <comment>角色信息修改成功</comment>
+  </data>
+  <data name="Role_information_creation_failed" xml:space="preserve">
+    <value>角色信息创建失败</value>
+    <comment>角色信息创建失败</comment>
+  </data>
+  <data name="Role_information_creation_success" xml:space="preserve">
+    <value>角色信息创建成功</value>
+    <comment>角色信息创建成功</comment>
+  </data>
+  <data name="Role_information_modification_failed" xml:space="preserve">
+    <value>角色信息修改失败</value>
+    <comment>角色信息修改失败</comment>
+  </data>
+  <data name="Sub_module_to_create_success" xml:space="preserve">
+    <value>子模块创建成功</value>
+    <comment>子模块创建成功</comment>
+  </data>
+  <data name="Successful_platform_information_modification" xml:space="preserve">
+    <value>平台信息修改成功</value>
+    <comment>平台信息修改成功</comment>
+  </data>
+  <data name="Success_of_functional_information_modification" xml:space="preserve">
+    <value>功能信息修改成功</value>
+    <comment>功能信息修改成功</comment>
+  </data>
+  <data name="Success_of_user_information_modification" xml:space="preserve">
+    <value>用户信息修改成功</value>
+    <comment>用户信息修改成功</comment>
+  </data>
+  <data name="The_success_of_total_functional_information_modification" xml:space="preserve">
+    <value>总功能信息修改成功</value>
+    <comment>总功能信息修改成功</comment>
+  </data>
+  <data name="Total_function_information_creation_failed" xml:space="preserve">
+    <value>总功能信息创建失败</value>
+    <comment>总功能信息创建失败</comment>
+  </data>
+  <data name="Total_function_information_creation_success" xml:space="preserve">
+    <value>总功能信息创建成功</value>
+    <comment>总功能信息创建成功</comment>
+  </data>
+  <data name="User_account1" xml:space="preserve">
+    <value>用户账号【</value>
+    <comment>用户账号【</comment>
+  </data>
+  <data name="User_information_creation_failed" xml:space="preserve">
+    <value>用户信息创建失败</value>
+    <comment>用户信息创建失败</comment>
+  </data>
+  <data name="User_information_creation_success" xml:space="preserve">
+    <value>用户信息创建成功</value>
+    <comment>用户信息创建成功</comment>
+  </data>
+  <data name="User_information_modification_failed" xml:space="preserve">
+    <value>用户信息修改失败</value>
+    <comment>用户信息修改失败</comment>
+  </data>
+  <data name="Channe_lID" xml:space="preserve">
+    <value>渠道ID【</value>
+    <comment>渠道ID【</comment>
+  </data>
+  <data name="Delete_channel" xml:space="preserve">
+    <value>删除渠道</value>
+    <comment>删除渠道</comment>
+  </data>
+  <data name="Channel_information_modification_failed" xml:space="preserve">
+    <value>渠道信息修改失败</value>
+    <comment>渠道信息修改失败</comment>
+  </data>
+  <data name="Channel_information_to_create_success" xml:space="preserve">
+    <value>渠道信息创建成功</value>
+    <comment>渠道信息创建成功</comment>
+  </data>
+  <data name="Channel_information_to_modify_the_success_of" xml:space="preserve">
+    <value>渠道信息修改成功</value>
+    <comment>渠道信息修改成功</comment>
+  </data>
+  <data name="Create_a_game_channel" xml:space="preserve">
+    <value>创建游戏渠道</value>
+    <comment>创建游戏渠道</comment>
+  </data>
+  <data name="Create_channel_information" xml:space="preserve">
+    <value>创建渠道信息</value>
+    <comment>创建渠道信息</comment>
+  </data>
+  <data name="Create_channel_information_creation_failed" xml:space="preserve">
+    <value>创建渠信息创建失败</value>
+    <comment>创建渠信息创建失败</comment>
+  </data>
+  <data name="Create_game_information" xml:space="preserve">
+    <value>创建游戏信息</value>
+    <comment>创建游戏信息</comment>
+  </data>
+  <data name="Create_game_information_success" xml:space="preserve">
+    <value>创建游戏信息成功</value>
+    <comment>创建游戏信息成功</comment>
+  </data>
+  <data name="Delete_game" xml:space="preserve">
+    <value>删除游戏</value>
+    <comment>删除游戏</comment>
+  </data>
+  <data name="fail" xml:space="preserve">
+    <value>失败</value>
+    <comment>失败</comment>
+  </data>
+  <data name="Gam_eID" xml:space="preserve">
+    <value>游戏ID【</value>
+    <comment>游戏ID【</comment>
+  </data>
+  <data name="Modify_channel_information" xml:space="preserve">
+    <value>修改渠道信息</value>
+    <comment>修改渠道信息</comment>
+  </data>
+  <data name="Modify_game_creation" xml:space="preserve">
+    <value>修改游戏创建</value>
+    <comment>修改游戏创建</comment>
+  </data>
+  <data name="Modify_game_info" xml:space="preserve">
+    <value>修改游戏信息</value>
+    <comment>修改游戏信息</comment>
+  </data>
+  <data name="Modify_game_information_successfully" xml:space="preserve">
+    <value>修改游戏信息成功</value>
+    <comment>修改游戏信息成功</comment>
+  </data>
+  <data name="Success_create" xml:space="preserve">
+    <value>成功,创建</value>
+    <comment>成功,创建</comment>
+  </data>
+  <data name="SQL_export_data" xml:space="preserve">
+    <value>sql导出数据</value>
+    <comment>sql导出数据</comment>
+  </data>
+  <data name="company_name" xml:space="preserve">
+    <value>北京有限公司</value>
+    <comment>北京有限公司</comment>
+  </data>
+  <data name="Onlydepartment" xml:space="preserve">
+    <value>部门</value>
+    <comment>部门</comment>
+  </data>
+  <data name="OnlyRole" xml:space="preserve">
+    <value>角色</value>
+    <comment>角色</comment>
+  </data>
+  <data name="OnlyWelcome" xml:space="preserve">
+    <value>欢迎</value>
+    <comment>欢迎</comment>
+  </data>
+  <data name="verification_code" xml:space="preserve">
+    <value>验证码</value>
+    <comment>验证码</comment>
+  </data>
+  <data name="no_sub_module" xml:space="preserve">
+    <value>暂无子模块</value>
+    <comment>暂无子模块</comment>
+  </data>
+  <data name="BG_background" xml:space="preserve">
+    <value>BG后台</value>
+    <comment>BG后台</comment>
+  </data>
+  <data name="tip_sure_enter" xml:space="preserve">
+    <value>您确定要进入</value>
+    <comment>您确定要进入</comment>
+  </data>
+  <data name="not_empty" xml:space="preserve">
+    <value>不能为空</value>
+    <comment>不能为空</comment>
+  </data>
+  <data name="password_check" xml:space="preserve">
+    <value>请输入6-16位任意包含英文、数字、符号的密码，不能使用，；'等特殊符号</value>
+    <comment>请输入6-16位任意包含英文、数字、符号的密码，不能使用，；'等特殊符号</comment>
+  </data>
+  <data name="Tip_AccountIpLimit" xml:space="preserve">
+    <value>亲, 您的帐号已经设定登录IP限制，请在常用IP下登录!</value>
+    <comment>亲, 您的帐号已经设定登录IP限制，请在常用IP下登录!</comment>
+  </data>
+  <data name="Tip_CodeError" xml:space="preserve">
+    <value>验证码错误！</value>
+    <comment>验证码错误！</comment>
+  </data>
+  <data name="Tip_FaileCopy" xml:space="preserve">
+    <value>（失败）：复制权限：</value>
+    <comment>（失败）：复制权限：</comment>
+  </data>
+  <data name="Tip_LoginError" xml:space="preserve">
+    <value>系统异常，请重新登录!</value>
+    <comment>系统异常，请重新登录!</comment>
+  </data>
+  <data name="Tip_not_OptMyself" xml:space="preserve">
+    <value>不能给自己账号中复制或转移</value>
+    <comment>不能给自己账号中复制或转移</comment>
+  </data>
+  <data name="Tip_SuscessCopy" xml:space="preserve">
+    <value>（成功）：复制权限：</value>
+    <comment>（成功）：复制权限：</comment>
+  </data>
+  <data name="Tip_UserAccountActivation" xml:space="preserve">
+    <value>亲, 您的帐号还没有激活,请联系管理员激活!</value>
+    <comment>亲, 您的帐号还没有激活,请联系管理员激活!</comment>
+  </data>
+  <data name="Tip_UserAccountThaw" xml:space="preserve">
+    <value>亲, 您的账户已经被冻结请联系管理员或24小时后自动解冻 解冻时间为</value>
+    <comment>亲, 您的账户已经被冻结请联系管理员或24小时后自动解冻 解冻时间为</comment>
+  </data>
+  <data name="usernotexist" xml:space="preserve">
+    <value>用户不存在</value>
+    <comment>用户不存在</comment>
+  </data>
+  <data name="verification_successful" xml:space="preserve">
+    <value>验证成功</value>
+    <comment>验证成功</comment>
+  </data>
+  <data name="copy_authority" xml:space="preserve">
+    <value>复制权限</value>
+    <comment>复制权限</comment>
+  </data>
+  <data name="tip_content" xml:space="preserve">
+    <value>内容</value>
+    <comment>内容</comment>
+  </data>
+  <data name="transfer_authority" xml:space="preserve">
+    <value>转移权限</value>
+    <comment>转移权限</comment>
+  </data>
+  <data name="organizeback" xml:space="preserve">
+    <value>开户行</value>
+    <comment>开户行</comment>
+  </data>
+  <data name="organizebackname" xml:space="preserve">
+    <value>开户名</value>
+    <comment>开户名</comment>
+  </data>
+  <data name="organizebackno" xml:space="preserve">
+    <value>银行账号</value>
+    <comment>银行账号</comment>
+  </data>
+  <data name="organizecontact" xml:space="preserve">
+    <value>联系方式</value>
+    <comment>联系方式</comment>
+  </data>
+  <data name="organizeid" xml:space="preserve">
+    <value>机构id</value>
+    <comment>机构id</comment>
+  </data>
+  <data name="organizename" xml:space="preserve">
+    <value>机构名称</value>
+    <comment>机构名称</comment>
+  </data>
+  <data name="organizeno" xml:space="preserve">
+    <value>机构号</value>
+    <comment>机构号</comment>
+  </data>
+  <data name="organizepeople" xml:space="preserve">
+    <value>联系人</value>
+    <comment>联系人</comment>
+  </data>
+  <data name="organizepercent" xml:space="preserve">
+    <value>分成利润</value>
+    <comment>分成利润</comment>
+  </data>
+  <data name="organizezone" xml:space="preserve">
+    <value>地区</value>
+    <comment>地区</comment>
+  </data>
+  <data name="userparentid" xml:space="preserve">
+    <value>上级机构</value>
+    <comment>上级机构</comment>
+  </data>
+  <data name="userphone" xml:space="preserve">
+    <value>手机号码</value>
+    <comment>手机号码</comment>
+  </data>
+  <data name="userzone" xml:space="preserve">
+    <value>地区</value>
+    <comment>地区</comment>
+  </data>
+  <data name="organizeintroducer" xml:space="preserve">
+    <value>介绍人</value>
+    <comment>介绍人</comment>
+  </data>
+  <data name="goodsdiamondnum" xml:space="preserve">
+    <value>钻石数量</value>
+    <comment>钻石数量</comment>
+  </data>
+  <data name="goodsid" xml:space="preserve">
+    <value>商品Id</value>
+    <comment>商品Id</comment>
+  </data>
+  <data name="goodsname" xml:space="preserve">
+    <value>商品名称</value>
+    <comment>商品名称</comment>
+  </data>
+  <data name="goodspresentnum" xml:space="preserve">
+    <value>赠送数量</value>
+    <comment>赠送数量</comment>
+  </data>
+  <data name="goodsprice" xml:space="preserve">
+    <value>商品价格</value>
+    <comment>商品价格</comment>
+  </data>
+  <data name="goodsrate" xml:space="preserve">
+    <value>折扣率</value>
+    <comment>折扣率</comment>
+  </data>
+  <data name="chargediamond" xml:space="preserve">
+    <value>充值钻石</value>
+    <comment>充值钻石</comment>
+  </data>
+  <data name="diamondnum" xml:space="preserve">
+    <value>钻石数量</value>
+    <comment>钻石数量</comment>
+  </data>
+  <data name="playerId" xml:space="preserve">
+    <value>玩家id</value>
+    <comment>玩家id</comment>
+  </data>
+  <data name="diamond_charge_fail" xml:space="preserve">
+    <value>钻石充值失败</value>
+    <comment>钻石充值失败</comment>
+  </data>
+  <data name="diamond_charge_suc" xml:space="preserve">
+    <value>钻石充值成功</value>
+    <comment>钻石充值成功</comment>
+  </data>
+  <data name="function_msg1" xml:space="preserve">
+    <value>查询充值总额</value>
+    <comment>查询充值总额</comment>
+  </data>
+  <data name="function_msg2" xml:space="preserve">
+    <value>查询充值是否成功</value>
+    <comment>查询充值是否成功</comment>
+  </data>
+  <data name="function_msg3" xml:space="preserve">
+    <value>查询钻石数量</value>
+    <comment>查询钻石数量</comment>
+  </data>
+  <data name="function_msg4" xml:space="preserve">
+    <value>修改钻石数量</value>
+    <comment>修改钻石数量</comment>
+  </data>
+  <data name="function_msg5" xml:space="preserve">
+    <value>发送系统公告</value>
+    <comment>发送系统公告</comment>
+  </data>
+  <data name="function_msg6" xml:space="preserve">
+    <value>查询在线人数</value>
+    <comment>查询在线人数</comment>
+  </data>
+  <data name="function_msg7" xml:space="preserve">
+    <value>充值</value>
+    <comment>充值</comment>
+  </data>
+  <data name="function_msg8" xml:space="preserve">
+    <value>请求线上房间数量</value>
+    <comment>请求线上房间数量</comment>
+  </data>
+  <data name="function_tip1" xml:space="preserve">
+    <value>开始时间</value>
+    <comment>开始时间</comment>
+  </data>
+  <data name="function_tip2" xml:space="preserve">
+    <value>结束时间</value>
+    <comment>结束时间</comment>
+  </data>
+  <data name="function_tip3" xml:space="preserve">
+    <value>订单号</value>
+    <comment>订单号</comment>
+  </data>
+  <data name="function_tip4" xml:space="preserve">
+    <value>发布</value>
+    <comment>发布</comment>
+  </data>
+  <data name="goods_add_fail" xml:space="preserve">
+    <value>商品添加失败</value>
+    <comment>商品添加失败</comment>
+  </data>
+  <data name="goods_add_suc" xml:space="preserve">
+    <value>商品添加成功</value>
+    <comment>商品添加成功</comment>
+  </data>
+  <data name="goods_diamon_num" xml:space="preserve">
+    <value>查询</value>
+    <comment>查询</comment>
+  </data>
+  <data name="goods_edit_fail" xml:space="preserve">
+    <value>商品修改失败</value>
+    <comment>商品修改失败</comment>
+  </data>
+  <data name="goods_edit_suc" xml:space="preserve">
+    <value>商品修改成功</value>
+    <comment>商品修改成功</comment>
+  </data>
+  <data name="modify_diamon_num" xml:space="preserve">
+    <value>修改</value>
+    <comment>修改</comment>
+  </data>
+  <data name="chargerecord" xml:space="preserve">
+    <value>玩家的充值记录</value>
+    <comment>玩家的充值记录</comment>
+  </data>
+  <data name="delroom" xml:space="preserve">
+    <value>解散房间</value>
+    <comment>解散房间</comment>
+  </data>
+  <data name="roomno" xml:space="preserve">
+    <value>房间号</value>
+    <comment>房间号</comment>
+  </data>
+</root>

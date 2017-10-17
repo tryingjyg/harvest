@@ -665,6 +665,20 @@ namespace LZManager.BLL.Common
                 return 0;
             }
         }
+
+        public int GetUserDepartment()
+        {
+            UsersEO userEO = GetUser();
+            if (userEO != null)
+            {
+                return Convert.ToInt32(userEO.UrDepartment.ToString() == "" ? "-1" : userEO.UrDepartment.ToString());//登录用户的级别
+            }
+            else
+            {
+                return -1;
+            }
+        }
+
         #endregion
 
         #region 处理遮挡层

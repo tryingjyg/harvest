@@ -153,6 +153,7 @@ namespace LZManager
                         #endregion
                         Session["username"] = usersEO.UrId;
                         Session["currentgameid"] = usersEO.UrGameId;
+                        Session["currole"] = usersEO.UrDepartment;
                         userManage.EditErrorloginLockTimeByPK(usersEO.UrId, "0", DateTime.Now); // 修改输错次数
                         InsertLog("用户登录", string.Format("username:{0},id:{1}", usersEO.UrName, usersEO.UrId), 0, GetPlatformIdByValue(1));
                         Response.Redirect("Framework/LoginPlant.aspx");

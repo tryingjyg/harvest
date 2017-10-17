@@ -270,7 +270,7 @@ namespace LZManager.Module
                         mdpEO.MdId = mdEO.MdId;
                         mdpEO.PmId = this.cblPermissionsTatal.Items[i].Value;
                         mdpEO.MpUser = GetUserID();
-                        mdpEO.MpAddTime = DateTime.Now.ToString();
+                        mdpEO.MpAddTime = DateTime.Now.ToShortTimeString();
 
                         mdpManage.AddModulePermissions(mdpEO);
                     }

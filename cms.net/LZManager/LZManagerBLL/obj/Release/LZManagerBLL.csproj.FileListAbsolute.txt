@@ -40,7 +40,6 @@ F:\gmtools\cms.net\LZManager\LZManagerBLL\obj\Release\LZManagerBLL.pdb
 G:\harvest\cms.net\LZManager\LZManagerBLL\bin\Release\Extend\Log.cs
 G:\harvest\cms.net\LZManager\LZManagerBLL\bin\Release\LZManagerBLL.dll
 G:\harvest\cms.net\LZManager\LZManagerBLL\bin\Release\LZManagerBLL.pdb
-G:\harvest\cms.net\LZManager\LZManagerBLL\bin\Release\FastDFS.API.dll
 G:\harvest\cms.net\LZManager\LZManagerBLL\bin\Release\log4net.dll
 G:\harvest\cms.net\LZManager\LZManagerBLL\bin\Release\LZManagerDAL.dll
 G:\harvest\cms.net\LZManager\LZManagerBLL\bin\Release\RabbitMQ.Client.dll

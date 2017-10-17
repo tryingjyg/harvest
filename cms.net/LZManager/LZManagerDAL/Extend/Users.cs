@@ -128,6 +128,7 @@ namespace LZManager.DAL
                        .AddInParameter("@Ur_id", userid)
                             .ExecTable();
         }
+
         #endregion
     }
 }

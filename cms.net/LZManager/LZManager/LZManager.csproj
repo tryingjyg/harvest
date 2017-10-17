@@ -657,7 +657,9 @@
     <Content Include="Users\QrCode.aspx" />
     <Content Include="Users\AuthorityCopy.aspx" />
     <Content Include="Users\UserInfo.aspx" />
+    <Content Include="Users\UserAdd.aspx" />
     <Content Include="Users\UsersEdit.aspx" />
+    <Content Include="Users\UsersAgentList.aspx" />
     <Content Include="Users\UsersList.aspx" />
     <Content Include="Users\UsersPasswordEdit.aspx" />
     <Content Include="Validate\test.aspx" />
@@ -671,6 +673,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="WptMall\GiveDiamond.aspx" />
     <Content Include="WptMall\GameFunction.aspx" />
     <Content Include="WptMall\MallPay.aspx" />
     <Content Include="WptMall\MallTChargeDiamondList.aspx" />
@@ -1066,12 +1069,26 @@
     <Compile Include="Users\UserInfo.aspx.designer.cs">
       <DependentUpon>UserInfo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Users\UserAdd.aspx.cs">
+      <DependentUpon>UserAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UserAdd.aspx.designer.cs">
+      <DependentUpon>UserAdd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Users\UsersEdit.aspx.cs">
       <DependentUpon>UsersEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Users\UsersEdit.aspx.designer.cs">
       <DependentUpon>UsersEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UsersAgentList.aspx.cs">
+      <DependentUpon>UsersAgentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UsersAgentList.aspx.designer.cs">
+      <DependentUpon>UsersAgentList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Users\UsersList.aspx.cs">
       <DependentUpon>UsersList.aspx</DependentUpon>
@@ -1115,6 +1132,13 @@
     </Compile>
     <Compile Include="WptMall\ConsumeReturn.ashx.cs">
       <DependentUpon>ConsumeReturn.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WptMall\GiveDiamond.aspx.cs">
+      <DependentUpon>GiveDiamond.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WptMall\GiveDiamond.aspx.designer.cs">
+      <DependentUpon>GiveDiamond.aspx</DependentUpon>
     </Compile>
     <Compile Include="WptMall\GameFunction.aspx.cs">
       <DependentUpon>GameFunction.aspx</DependentUpon>

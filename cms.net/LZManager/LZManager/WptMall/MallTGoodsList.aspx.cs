@@ -13,6 +13,7 @@ using System.Collections.Specialized;
 using System.Web.Script.Serialization;
 using System.IO;
 using LZManager.Utility;
+using LZManager.Common;
 
 namespace LZManager.MallGoods
 {
@@ -26,13 +27,21 @@ namespace LZManager.MallGoods
         {
             GetAuthorityUrl(this.Page, "WptMall/MallTGoodsList.aspx", 0);
 
-            if (GetUserLeave() >= 90)
+            if (GetUserDepartment() == 1)
             {
                 //btnAuthorityCopy.Visible = true;
+                this.btnAdd.Visible = true;
+                this.btnEdit.Visible = true;
+                this.btnDel.Visible = true;
+                this.btnGive.Visible = true;
             }
             else
             {
                 //btnAuthorityCopy.Visible = false;
+                this.btnAdd.Visible = false;
+                this.btnEdit.Visible = false;
+                this.btnDel.Visible = false;
+                this.btnGive.Visible = false;
             }
             if (!IsPostBack)
             {
@@ -594,8 +603,7 @@ namespace LZManager.MallGoods
 
             //int payMoneyNum = Convert.ToInt32(payMoney) * 100;
             string curuserId = Session["currentgameid"].ToString();
-            System.Guid guid = new Guid();
-            string trandeNo = guid.ToString().Replace("-", "");
+            string trandeNo = PubFuncs.GenerateOrderNumber();
             string payUrl = PayUlity.ZYFPay("9", payWapType, trandeNo, paySubject, curuserId);
             //this.divAlert.Visible = true;
             //this.lblAlert.Text = payOutTradeNo; //"一次只能修改一条记录";
@@ -629,6 +637,16 @@ namespace LZManager.MallGoods
                 this.lblAlert.Text = Resources.Resource.diamond_charge_suc; //"钻石充值成功";
             }
             */
+        }
+
+        /// <summary>
+        /// 赠送钻石
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void btnGive_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("GiveDiamond.aspx");
         }
     }
 }

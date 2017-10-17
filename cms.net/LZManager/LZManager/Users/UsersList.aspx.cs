@@ -515,9 +515,21 @@ namespace LZManager.Users
                 //    e.Row.Cells[6].Text = "未知";
                 //}
 
-                if (e.Row.Cells[16].Text == "0")
+                if (e.Row.Cells[12].Text == "1")
                 {
-                    e.Row.Cells[16].Text = "管理员";
+                    e.Row.Cells[12].Text = "管理员";
+                }
+                else if (e.Row.Cells[12].Text == "2")
+                {
+                    e.Row.Cells[12].Text = "机构代理";
+                }
+                else if (e.Row.Cells[12].Text == "3")
+                {
+                    e.Row.Cells[12].Text = "普通代理";
+                }
+                else
+                {
+                    e.Row.Cells[12].Text = "未知";
                 }
                 //else if (e.Row.Cells[16].Text == "1")
                 //{

@@ -61,12 +61,12 @@
                 </td>
             </tr>
             <tr>
-                <td bgcolor="#cadee8">订单号:
+                <%--<td bgcolor="#cadee8">订单号:
                 </td>
                 <td bgcolor="#e9f2f7">
                     <asp:TextBox ID="txtOrderNo" CssClass="text_input" runat="server" MaxLength="50"
                         Width="80%"></asp:TextBox>
-                </td>
+                </td>--%>
                 <td bgcolor="#cadee8">玩家Id:
                 </td>
                 <td bgcolor="#e9f2f7">

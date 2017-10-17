@@ -1,0 +1,170 @@
+﻿*
+{
+    font-size: 9pt;
+}
+body
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 微软雅黑, 宋体, Arial, Helvetica, Verdana, sans-serif;
+    color: #000000;
+}
+html, body
+{
+    margin: 0px auto;
+    padding: 0px;
+    height: 100%;
+    overflow: hidden;
+}
+#loading
+{
+    position: absolute;
+    z-index: 3000;
+    left: 45%;
+    top: 45%;
+    border: 1px solid #ccc;
+    width: auto;
+    padding: 6px 5px 6px 40px;
+    background: #fff url('../images/loading.gif') no-repeat scroll 7px 2px;
+    display: none;
+    cursor: pointer;
+}
+#Toploading
+{
+    position: absolute;
+    z-index: 3000;
+    top: 0%;
+    border: 1px solid #f0c36d;
+    margin-top:1px;
+    color: #222;
+    width: auto;
+    padding: 4px;
+    background: rgb(249, 237, 190);
+    display: none;
+    cursor: pointer;
+}
+a:link
+{
+    color: #222;
+    text-decoration: none;
+}
+a:visited
+{
+    color: #222;
+    text-decoration: none;
+}
+a:hover
+{
+    color: #222;
+    text-decoration: none;
+}
+a:active
+{
+    color: #222;
+    text-decoration: none;
+}
+/*home
+------------------------------------------------*/
+.box
+{
+    margin: 0px;
+    padding: 0px;
+    min-height: 65px;
+    height: auto;
+    border: 1px solid #ccc;
+}
+.box-title
+{
+    height: 27px;
+    line-height: 25px;
+    text-indent: 7px;
+    background: url(../images/datagrid_header_bg.gif) repeat-x;
+}
+.box-title img
+{
+    padding-bottom: 3px;
+    vertical-align: middle;
+}
+.box-content
+{
+    height: auto;
+    padding: 7px;
+    line-height: 20px;
+}
+.blank10
+{
+    margin: 0px auto;
+    height: 1px;
+    overflow: hidden;
+}
+.line
+{
+    margin: 0px auto;
+    height: 1px;
+    background: #ccc;
+}
+.topline
+{
+    border-top: 1px solid #ccc;
+}
+/*home end
+------------------------------------------------*/
+
+/*Tab
+------------------------------------------------*/
+div.Tabremovesel
+{
+    font-weight: bold;
+    border: 0px;
+    outline: none;
+    display: inline-block;
+    width: 85px;
+    line-height: 26px;
+    height: 26px;
+    padding-left: 20px;
+    vertical-align: bottom;
+    margin-top: 3px;
+    float: left;
+    cursor: pointer;
+    background: url(../Images/title_over.png) no-repeat left;
+}
+div.Tabsel
+{
+    font-weight: bold;
+    color: #FFFFFF;
+    border: 0px;
+    outline: none;
+    display: inline-block;
+    width: 85px;
+    line-height: 26px;
+    height: 26px;
+    color: white;
+    padding-left: 20px;
+    vertical-align: bottom;
+    margin-top: 3px;
+    float: left;
+    cursor: pointer;
+    background: url(../Images/title_over1.png) no-repeat left;
+}
+/*Tab end
+------------------------------------------------*/
+/*选择框的样式*/
+#rect
+{
+    position: absolute;
+    visibility: hidden;
+    z-index: 999;
+    background-color: #000000;
+    filter: alpha(opacity=10); /* IE */
+    -moz-opacity: 0.1; /* Moz + FF */
+    opacity: 0.1;
+    border: 1px dashed #00AAFF;
+}
+/*全局遮罩和局部遮罩*/
+.pageBase_Div
+{
+    z-index: 999;
+    -moz-opacity: 0.6; /*Firefox*/
+    opacity: 0.6; /*Opera*/
+    filter: alpha(opacity=60); /*IE*/
+}

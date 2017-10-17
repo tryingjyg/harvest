@@ -1,0 +1,13 @@
+G:\harvest\cms.net\LZManager\LZManager\bin\Extend\Log.cs
+G:\harvest\cms.net\LZManager\LZManager\bin\LZManager.dll.config
+G:\harvest\cms.net\LZManager\LZManager\bin\LZManager.dll
+G:\harvest\cms.net\LZManager\LZManager\bin\LZManager.pdb
+G:\harvest\cms.net\LZManager\LZManager\bin\AspNetPager.dll
+G:\harvest\cms.net\LZManager\LZManager\bin\LZManagerBLL.dll
+G:\harvest\cms.net\LZManager\LZManager\bin\LZManagerDAL.dll
+G:\harvest\cms.net\LZManager\LZManager\bin\ThoughtWorks.QRCode.dll
+G:\harvest\cms.net\LZManager\LZManager\bin\LZManagerBLL.pdb
+G:\harvest\cms.net\LZManager\LZManager\bin\LZManagerDAL.pdb
+G:\harvest\cms.net\LZManager\LZManager\obj\Release\LZManager.csprojResolveAssemblyReference.cache
+G:\harvest\cms.net\LZManager\LZManager\obj\Release\LZManager.dll
+G:\harvest\cms.net\LZManager\LZManager\obj\Release\LZManager.pdb

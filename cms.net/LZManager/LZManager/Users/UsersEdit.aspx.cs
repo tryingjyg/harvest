@@ -18,7 +18,7 @@ namespace LZManager.Users
     {
         UserManage userManage = new UserManage();
         RoleUserManage rluManage = new RoleUserManage();
-        RoleManage rlManage = new RoleManage();       
+        RoleManage rlManage = new RoleManage();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -120,12 +120,12 @@ namespace LZManager.Users
             UsersEO userEO = GetUser();
             int leave = GetUserLeave(); // 获取用户等级
             // 根据级别绑定用户可选的级别信息
-            BindddlUserLeave(leave); 
-            
+            BindddlUserLeave(leave);
+
             // 判断开发管理员以上的用户可以对任何用户进行编辑
             if (leave >= 90)
             {
-                this.cblRoles.DataSource = rlManage.Get(" Rl_del = 0",null);
+                this.cblRoles.DataSource = rlManage.Get(" Rl_del = 0", null);
             }
             else
             {
@@ -134,7 +134,7 @@ namespace LZManager.Users
                 strWhere.Append("   Rl_id in ( select Rl_id from  roleuser where Ur_id =@Ur_id )  and Rl_del = 0 and Rl_name <> @UserEditName ");
                 parm.Add(new MySqlParameter("@Ur_id", GetUserID()));
                 parm.Add(new MySqlParameter("@UserEditName", ConfigurationManager.AppSettings["UserEditName"].ToString()));
-                this.cblRoles.DataSource = rlManage.Get(strWhere.ToString(),parm);
+                this.cblRoles.DataSource = rlManage.Get(strWhere.ToString(), parm);
                 //this.cblRoles.DataSource = rlManage.Get(" Rl_id in ( select Rl_id from  roleuser where Ur_id = '" + GetUserID() + "')  and Rl_del = 0 and Rl_name <> '" + ConfigurationManager.AppSettings["UserEditName"].ToString() + "' ");
                 // 根据用户级别判断该用户是否有用户账号管理的权限
                 cbAccountManagement.Enabled = false;
@@ -164,18 +164,18 @@ namespace LZManager.Users
                 this.hfLoginName.Value = usersEO.UrLoginName;
                 this.txtName.Text = usersEO.UrName;
                 this.txtParent.Text = usersEO.UrParent;
-                this.txtPhone.Text = usersEO.UrPhone;
+                //this.txtPhone.Text = usersEO.UrPhone;
                 this.txtZone.Text = usersEO.UrZone;
                 this.txtContactPeople.Text = usersEO.UrPeople;
                 this.txtContact.Text = usersEO.UrContact;
                 this.txtGameId.Text = usersEO.UrGameId;
                 this.txtDiamondNum.Text = usersEO.UrDiamondNum;
-                this.txtBankName.Text = usersEO.UrBankName;
-                this.txtBank.Text = usersEO.UrBank;
+                //this.txtBankName.Text = usersEO.UrBankName;
+                //this.txtBank.Text = usersEO.UrBank;
                 this.txtPercent.Text = usersEO.UrPercent;
-                this.txtBankNo.Text = usersEO.UrBankNo;
-                this.txtIntrdouce.Text = usersEO.UrIntroducer;
-                this.ddlDepartment.SelectedValue = usersEO.UrDepartment;
+                //this.txtBankNo.Text = usersEO.UrBankNo;
+                //this.txtIntrdouce.Text = usersEO.UrIntroducer;
+                this.ddlDepartment.SelectedValue = GetDepartment()[Convert.ToInt32(usersEO.UrDepartment) - 1];
                 this.rblState.SelectedValue = usersEO.UrState;
                 this.txtUserIps.Text = usersEO.UrLockBindIp;
             }
@@ -215,12 +215,12 @@ namespace LZManager.Users
             StringBuilder strWhere = new StringBuilder();
             strWhere.Append("  Ur_id= @Rl_name ");
             parm.Add(new MySqlParameter("@Rl_name", Request.QueryString["Urid"]));
-            DataTable dt = rluManage.GetTable(strWhere.ToString(),parm);
+            DataTable dt = rluManage.GetTable(strWhere.ToString(), parm);
 
             UsersEO userEO = userManage.GetUser(Request.QueryString["Urid"]);
             try
             {
-                ddlUserLeave.SelectedValue = userEO.UrText1;
+                //ddlUserLeave.SelectedValue = userEO.UrText1;
             }
             catch { }
 
@@ -279,24 +279,24 @@ namespace LZManager.Users
                 usersEO.UrName = this.txtName.Text.Trim();
 
                 usersEO.UrParent = this.txtParent.Text.Trim();
-                usersEO.UrPhone = this.txtPhone.Text.Trim();
+                usersEO.UrPhone = "";//this.txtPhone.Text.Trim();
                 usersEO.UrZone = this.txtZone.Text.Trim();
                 usersEO.UrPeople = this.txtContactPeople.Text.Trim();
                 usersEO.UrContact = this.txtContact.Text.Trim();
                 usersEO.UrGameId = this.txtGameId.Text.Trim();
                 usersEO.UrDiamondNum = this.txtDiamondNum.Text.Trim();
-                usersEO.UrBankName = this.txtBankName.Text.Trim();
-                usersEO.UrBank = this.txtBank.Text.Trim();
+                usersEO.UrBankName = "";//this.txtBankName.Text.Trim();
+                usersEO.UrBank = "";//this.txtBank.Text.Trim();
                 usersEO.UrPercent = this.txtPercent.Text.Trim();
-                usersEO.UrBankNo = this.txtBankNo.Text.Trim();
-                usersEO.UrIntroducer = this.txtIntrdouce.Text.Trim();
+                usersEO.UrBankNo = "";//this.txtBankNo.Text.Trim();
+                usersEO.UrIntroducer = "";//this.txtIntrdouce.Text.Trim();
                 usersEO.UrName = this.txtName.Text.Trim();
                 usersEO.UrName = this.txtName.Text.Trim();
-                usersEO.UrRolestate = this.ddlDepartment.SelectedValue;
-                usersEO.UrDepartment = this.ddlDepartment.SelectedValue;
+                usersEO.UrRolestate = this.ddlDepartment.SelectedIndex.ToString();
+                usersEO.UrDepartment = this.ddlDepartment.SelectedIndex.ToString();
                 usersEO.UrState = this.rblState.SelectedValue;
                 usersEO.UrLockBindIp = this.txtUserIps.Text.ToString().Trim();
-                usersEO.UrText1 = this.ddlUserLeave.Text.ToString().Trim(); //  用户级别
+                //usersEO.UrText1 = this.ddlUserLeave.Text.ToString().Trim(); //  用户级别
 
 
                 #endregion
@@ -432,10 +432,10 @@ namespace LZManager.Users
                 #endregion
 
                 CloseDivImplementation();
-                
+
             }
 
-          
+
         }
 
         /// <summary>
@@ -468,7 +468,7 @@ namespace LZManager.Users
             StringBuilder strWhereC = new StringBuilder();
             strWhereC.Append("  Ur_loginName =@Ur_loginName AND Ur_del = 0 ");
             parmC.Add(new MySqlParameter("@Ur_loginName", this.txtLoginName.Text.Trim()));
-            if (userManage.GetTable(strWhereC.ToString(),parmC).Rows.Count > 0)
+            if (userManage.GetTable(strWhereC.ToString(), parmC).Rows.Count > 0)
             //if (userManage.GetTable(string.Format(" Ur_loginName = '{0}' AND Ur_del = 0", this.txtLoginName.Text.Trim())).Rows.Count > 0)
             {
                 return false;//已存在
@@ -535,9 +535,9 @@ namespace LZManager.Users
                     }
                 }
                 #endregion
-               
+
             }
-          
+
             if (flg == true)
             {
                 this.divAlert.Visible = false;
